@@ -6,5 +6,8 @@ module.exports = {
     title: `my blog site`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+      "gatsby-plugin-image",
+      "gatsby-plugin-sharp"
+  ],
 }
