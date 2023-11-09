@@ -17,5 +17,8 @@ module.exports = {
 
           }
       },
+      "gatsby-plugin-mdx",
+      "gatsby-remark-images",
+      "gatsby-remark-prismjs",
   ],
 }
