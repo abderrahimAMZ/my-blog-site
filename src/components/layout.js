@@ -1,5 +1,6 @@
 import * as React from "react";
 import {graphql, Link, useStaticQuery} from 'gatsby';
+
 import { container,
     heading,
     navLinks,
@@ -8,7 +9,6 @@ import { container,
     siteTitle
 
 } from "./layout.module.css";
-
 const Layout = ({pageTitle,children}) => {
     const data = useStaticQuery(graphql`query {
     site {
@@ -21,6 +21,7 @@ const Layout = ({pageTitle,children}) => {
     }
   }
 `)
+
     return (
         <div className={container}>
             <header className={siteTitle}>

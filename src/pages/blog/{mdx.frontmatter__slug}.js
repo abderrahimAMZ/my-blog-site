@@ -1,8 +1,7 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
-
+import {graphql} from 'gatsby'
 const BlogPost = ({ data, children }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
