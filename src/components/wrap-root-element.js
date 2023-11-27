@@ -1,10 +1,12 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import {Highlight,themes, defaultProps } from "prism-react-renderer";
+
+// Other styling imports
 
 const components = {
-
     pre: props => {
+        console.log(props);
         const className = props.children.props.className || "";
         const code = props.children.props.children.trim();
         const language = className.replace(/language-/, "");
@@ -13,7 +15,8 @@ const components = {
             <Highlight
                 {...defaultProps}
                 code={code}
-                language={language}
+                language="rust"
+                theme={themes.vsDark}
             >
                 {({ className, style, tokens, getLineProps, getTokenProps }) => (
                     <pre className={className} style={style}>

@@ -9,26 +9,32 @@ Wow look at all this content. How do they do it?
 Here's an example of my new custom code blocks:
 
 
-```jsx
-// here's a button in React!
-<button
-  onClick={() => {
-    alert("Hello MDX!");
-  }}
->
-  test
-</button>
-```
 
 Wow! Such code snippets!
 Let's see another, with line highlighting:
 
-```js
+
+
+```rust
 // fizzbuzz in JS
-for (let i = 1; i <= 100; i++) {
-  let out = "";
-  if (i % 3 === 0) out += "Fizz";
-  if (i % 5 === 0) out += "Buzz";
-  console.log(out || i);
+struct Soemthing(i32,i32,i32);
+
+struct Node {
+    val : i32,
+    next : Box<Node>
+}
+
+
+fn main() -> Option<i32> {
+    let val = 9;
+    let node = Node::new(val);
+    return Some(node.val)
+}
+```
+
+
+```rust
+fn main() -> Option<i32> {
+    None
 }
 ```
