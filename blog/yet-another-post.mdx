@@ -1,19 +1,31 @@
 ---
-title: "Yet Another Post"
+title: "why rust is the best programming language"
 date: "2021-07-25"
 slug: "yet-another-post"
 ---
 
-Wow look at all this content. How do they do it?
 
-Here's an example of my new custom code blocks:
+# Introduction
 
+Rust is a modern, systems-level programming language that prioritizes safety, performance, and concurrency. Its design aims to eliminate common programming errors while providing low-level control over system resources. Let's explore some key features that make Rust a compelling choice for developers.
 
+## Safety and Memory Management
 
-Wow! Such code snippets!
-Let's see another, with line highlighting:
+One of Rust's standout features is its ownership system, which eliminates many common memory-related bugs, such as null pointer dereferencing and data races. The borrow checker ensures memory safety without the need for a garbage collector. Here's an example:
 
+```rust
+fn main() {
+    let mut s = String::from("Hello, Rust!");
 
+    let len = calculate_length(&s);
+
+    println!("Length of '{}' is {}.", s, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
 
 ```rust highlights=3-5
 // fizzbuzz in JS
