@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `my blog site`,
+    title: `Welcome to, Tea Coding!`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [

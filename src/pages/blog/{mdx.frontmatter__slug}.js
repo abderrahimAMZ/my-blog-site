@@ -4,10 +4,13 @@ import Seo from '../../components/seo'
 import {graphql} from 'gatsby'
 const BlogPost = ({ data, children }) => {
     return (
+        <div>
         <Layout pageTitle={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>
             {children}
         </Layout>
+
+        </div>
     )
 }
 

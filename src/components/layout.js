@@ -31,21 +31,7 @@ const Layout = ({pageTitle,children}) => {
             <header className={siteTitle}>
             {data.site.siteMetadata.title}
             </header>
-            <nav className="text-rebeccapurple">
-                <ul className="flex space-x-4">
-                    <li className="inline-block">
-                        <Link to={"/"} className="no-underline hover:underline">Home</Link>
-                    </li>
-                    <li className="inline-block">
-                        <Link to={"/about"} className="no-underline hover:underline">About</Link>
-                    </li>
-                    <li className="inline-block">
-                        <Link to={"/blog"} className="no-underline hover:underline">Blog posts</Link>
-                    </li>
-                </ul>
-            </nav>
-
-            <main>
+            <main className={"mb-52"}>
                 <h1 className={heading}>
                     {pageTitle}
 

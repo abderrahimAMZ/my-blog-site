@@ -7,8 +7,8 @@ export default function Footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
-                            <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                            <img /*src="https://flowbite.com/docs/images/logo.svg"*/ src = "#" className="h-8 me-3" alt="TeaCode" />
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TeaCode</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -16,10 +16,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
-                                </li>
-                                <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                                    <a href="#" className="hover:underline">Check out my Blog Posts</a>
                                 </li>
                             </ul>
                         </div>
@@ -27,10 +24,10 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
+                                    <a href="https://github.com/abderrahimAMZ" className="hover:underline ">Github</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                    <a href="https://discord.gg/mpKWbdDK" className="hover:underline">Discord</a>
                                 </li>
                             </ul>
                         </div>
