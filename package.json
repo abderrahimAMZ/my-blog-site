@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.12.11",
     "gatsby-plugin-image": "^3.12.3",
@@ -37,5 +39,11 @@
   },
   "engines": {
     "node": "18.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gatsby-plugin-postcss": "^6.12.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.5"
   }
 }

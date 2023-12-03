@@ -1,6 +1,5 @@
 import * as React from "react";
 import {graphql, Link, useStaticQuery} from 'gatsby';
-
 import { container,
     heading,
     navLinks,
@@ -9,6 +8,8 @@ import { container,
     siteTitle
 
 } from "./layout.module.css";
+import Navbar from "./navbar";
+import Footer from "./footer";
 const Layout = ({pageTitle,children}) => {
     const data = useStaticQuery(graphql`query {
     site {
@@ -23,23 +24,27 @@ const Layout = ({pageTitle,children}) => {
 `)
 
     return (
+        <div>
+
+        <Navbar />
         <div className={container}>
             <header className={siteTitle}>
             {data.site.siteMetadata.title}
             </header>
-            <nav>
-                <ul className={navLinks}>
-                    <li className={navLinkItem}>
-                        <Link to={"/"} className={navLinkText}>Home </Link>
+            <nav className="text-rebeccapurple">
+                <ul className="flex space-x-4">
+                    <li className="inline-block">
+                        <Link to={"/"} className="no-underline hover:underline">Home</Link>
                     </li>
-                    <li className={navLinkItem}>
-                        <Link to={"/about"} className={navLinkText}>about</Link>
+                    <li className="inline-block">
+                        <Link to={"/about"} className="no-underline hover:underline">About</Link>
                     </li>
-                    <li className={navLinkItem}>
-                        <Link to={"/blog"} className={navLinkText}>Blog posts </Link>
+                    <li className="inline-block">
+                        <Link to={"/blog"} className="no-underline hover:underline">Blog posts</Link>
                     </li>
                 </ul>
             </nav>
+
             <main>
                 <h1 className={heading}>
                     {pageTitle}
@@ -47,6 +52,8 @@ const Layout = ({pageTitle,children}) => {
                 </h1>
                 {children}
             </main>
+        </div>
+            <Footer />
         </div>
     )
 }
