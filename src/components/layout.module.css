@@ -1,7 +1,9 @@
 .container {
     margin : auto;
     max-width: 600px;
-    font-family: sans-serif;
+    font-family:  sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .heading {
     color : rebeccapurple;
@@ -24,4 +26,10 @@
     color: rgb(128, 128, 128);
     font-weight: 700;
     margin: 3rem 0;
+}
+
+
+p {
+    font-family: "Merriweather", "Source Code Pro", sans-serif;
+    font-size: 18px;
 }

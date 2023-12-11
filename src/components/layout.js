@@ -22,16 +22,15 @@ const Layout = ({pageTitle,children}) => {
     }
   }
 `)
-
     return (
-        <div>
+        <div className={"dark:bg-black dark:text-white"}>
 
         <Navbar />
         <div className={container}>
             <header className={siteTitle}>
             {data.site.siteMetadata.title}
             </header>
-            <main className={"mb-52"}>
+            <main className={"mb-52 font-serif "}>
                 <h1 className={heading}>
                     {pageTitle}
 

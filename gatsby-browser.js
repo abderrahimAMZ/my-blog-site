@@ -1,21 +1,29 @@
 import { wrapRootElement as wrap } from "./src/components/wrap-root-element";
 import './src/styles/global.css'
+
+
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-/*
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-} else {
-    document.documentElement.classList.remove('dark')
+const lightSwitches = document.querySelectorAll('.light-switch');
+if (lightSwitches.length > 0) {
+    lightSwitches.forEach((lightSwitch, i) => {
+        if (localStorage.getItem('dark-mode') === 'true') {
+            lightSwitch.checked = true;
+        }
+        lightSwitch.addEventListener('change', () => {
+            const {checked} = lightSwitch;
+            lightSwitches.forEach((el, n) => {
+                if (n !== i) {
+                    el.checked = checked;
+                }
+            });
+            if (lightSwitch.checked) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('dark-mode', true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('dark-mode', false);
+            }
+        });
+    });
 }
-
-// Whenever the user explicitly chooses light mode
-localStorage.theme = 'light'
-
-// Whenever the user explicitly chooses dark mode
-localStorage.theme = 'dark'
-
-// Whenever the user explicitly chooses to respect the OS preference
-localStorage.removeItem('theme')
-
- */
 export const wrapRootElement = wrap;

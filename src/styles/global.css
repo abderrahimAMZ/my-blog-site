@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Source+Sans+3&display=swap');
 
-/* Default styling for headings (h1 to h4) */
+
+      /* Default styling for headings (h1 to h4) */
 
 /* Heading 1 */
 h1 {
@@ -43,4 +45,5 @@ h4 {
 .my-footer {
         background: rebeccapurple;
 }
+
 
