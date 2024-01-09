@@ -1,25 +1,44 @@
 import * as react from "react"
-// Step 1: Import React
-import * as React from 'react'
-import Layout from "../components/layout";
-import { Link } from 'gatsby'
-import {StaticImage} from "gatsby-plugin-image";
-import { useStaticQuery, graphql} from "gatsby";
-
 import Seo from "../components/seo";
-// Step 2: Define your component
-const IndexPage = () => {
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+
+const IndexPage = ({data}) => {
   return (
       <main>
-         <Layout pageTitle={"Home Page"}>
-             <p>I'm making this by following the Gatsby Tutorial.</p>
-             <StaticImage src={"https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"} alt={"Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"} />
-             <StaticImage src="../images/bootloader.png" alt={"a bootloader loaded in memory image"} />
-         </Layout>
+          <Layout pageTitle="Home page">
+              {
+                  data.allMdx.nodes.map(node => (
+                      <article key={node.id}>
+                          <h2>
+                              <Link to={`/series/${node.frontmatter.slug}`}>
+                                  {node.frontmatter.title}
+                              </Link>
+                          </h2>
+                          <p>Posted: {node.frontmatter.date}</p>
+                      </article>
+                  ))
+              }
+          </Layout>
       </main>
   )
 }
 
+export const query = graphql`
+  query {
+    allMdx(sort: { frontmatter: { date: DESC }}) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          slug
+        }
+        id
+      }
+    }
+  }
+`
 // You'll learn about this in the next task, just copy it for now
 export const Head = () => {
 

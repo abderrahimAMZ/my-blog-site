@@ -50,7 +50,7 @@ const Code = props => {
             <div style={{ display: "flex", position: "relative" }}>
                 <div
                     style={{
-                        background: "#ffffff",
+                        background: "#BAAD81",
                         marginRight: "1rem",
                         paddingLeft: "0.5rem",
                         paddingRight: "0.5rem",

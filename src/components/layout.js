@@ -11,6 +11,13 @@ import { container,
 import Navbar from "./navbar";
 import Footer from "./footer";
 const Layout = ({pageTitle,children}) => {
+
+    const [darkMode, setDarkMode] = React.useState(true)
+
+    function toggleDarkMode() {
+        setDarkMode(darkMode => !darkMode)
+    }
+
     const data = useStaticQuery(graphql`query {
     site {
     siteMetadata {
@@ -23,9 +30,9 @@ const Layout = ({pageTitle,children}) => {
   }
 `)
     return (
-        <div className={"dark:bg-black dark:text-white"}>
+        <div className={`dark:bg-black dark:text-white ${darkMode ? "dark" : ""}`}>
 
-        <Navbar />
+        <Navbar darkmode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <div className={container}>
             <header className={siteTitle}>
             {data.site.siteMetadata.title}
