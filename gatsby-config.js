@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
       "gatsby-plugin-image",
       "gatsby-plugin-sharp",
+      "gatsby-transformer-sharp",
       {
           resolve : "gatsby-source-filesystem",
           options : {
@@ -20,8 +21,8 @@ module.exports = {
       {
           resolve : "gatsby-source-filesystem",
           options : {
-              name: `series`,
-              path: `${__dirname}/series`,
+              name: `images`,
+              path: `${__dirname}/images`,
 
           }
       },

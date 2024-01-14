@@ -3,6 +3,7 @@ import Seo from "../components/seo";
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import {StaticImage} from "gatsby-plugin-image";
 
 const IndexPage = ({data}) => {
   return (
@@ -19,7 +20,10 @@ const IndexPage = ({data}) => {
                           <p>Posted: {node.frontmatter.date}</p>
                       </article>
                   ))
+
+
               }
+
           </Layout>
       </main>
   )

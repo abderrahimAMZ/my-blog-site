@@ -10,12 +10,13 @@ import { container,
 } from "./layout.module.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import {StaticImage} from "gatsby-plugin-image";
 const Layout = ({pageTitle,children}) => {
 
-    const [darkMode, setDarkMode] = React.useState(true)
+    const [darkMode, setDarkMode] = React.useState(true);
 
     function toggleDarkMode() {
-        setDarkMode(darkMode => !darkMode)
+        setDarkMode(lightingMode => !lightingMode)
     }
 
     const data = useStaticQuery(graphql`query {
@@ -44,6 +45,7 @@ const Layout = ({pageTitle,children}) => {
                 </h1>
                 {children}
             </main>
+
         </div>
             <Footer />
         </div>
