@@ -4,6 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
 import {Link} from "gatsby"
+
+import {ModeContext} from "./ModeProvider"
+import {useContext} from "react"
+
 import Buttontoggle from "./buttontoggle"
 import {Image} from "react-bootstrap"
 
@@ -23,7 +27,9 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar(props) {
+export default function Navbar() {
+    const [darkMode, toggleDarkMode] = useContext(ModeContext);
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -71,7 +77,7 @@ export default function Navbar(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-center ml-3" onClick={props.toggleDarkMode}>
+                            <div className="flex flex-col justify-center ml-3" onClick={toggleDarkMode}>
                                 <label className="relative cursor-pointer p-2" htmlFor="light-switch">
                                     <svg className="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                                         <path
