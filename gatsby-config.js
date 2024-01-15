@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Welcome to, Tea Coding!`,
+    title: `Welcome to, CodeInspect!`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
