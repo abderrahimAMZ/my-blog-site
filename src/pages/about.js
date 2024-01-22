@@ -7,7 +7,8 @@ const AboutPage = () => {
     return (
         <main>
             <Layout pageTitle={"About Me"}>
-                <p>am a beginner software developer with experience in web development using Django and React, as well as proficiency in using Vim and JetBrains products. I built a desktop application in Java and contributed to developing IoT solutions. Currently, I am focused on embedded development using C and C++ and i am highly motivated to create innovative software solutions that meet client requirements. I am seeking a maket initiation internship</p>
+    <p>I'm Abderrahim Amzaourou, a software developer with a keen interest in low-level and system programming. My primary coding languages are C, C++, and Rust, but I also have extensive experience with Java, JavaScript, and Python. I'm passionate about sharing knowledge and fostering a community of computer science enthusiasts. Feel free to reach out to me at <a href="mailto:abderrahim.amzaourou@gmail.com">abderrahim.amzaourou@gmail.com</a>.
+</p>
             </Layout>
         </main>
     )

@@ -70,3 +70,35 @@ h4 {
 .dark {
     background-color: #282c34;
 }
+
+ article {
+     padding: 16px;
+     margin-bottom: 16px;
+ }
+.light article {
+    background-color: #f0f0f0; /* Adjust this to the desired shade of grey */
+    border-radius: 5%;
+}
+
+
+.dark article {
+    background-color: #1f2937;
+    border-radius: 5%;
+}
+
+
+.light h2 a{
+    color: #000000;
+}
+.light h2 a:hover{
+    color: rebeccapurple;
+}
+
+.dark h2 a:hover{
+    color: #E30B5C;
+}
+.back-link {
+    font-size: 1.2em;
+    background-color: rebeccapurple/* Adjust this to the desired font size */
+    /* Other styles... */
+}

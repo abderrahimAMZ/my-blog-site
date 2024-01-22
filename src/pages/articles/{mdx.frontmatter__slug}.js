@@ -1,14 +1,16 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 const BlogPost = ({ data, children }) => {
     return (
         <div>
         <Layout pageTitle={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>
             {children}
+            <Link to={"/"} className={"back-link"}>  Go back to the Articles page </Link>
         </Layout>
+
 
         </div>
     )

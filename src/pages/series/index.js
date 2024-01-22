@@ -18,6 +18,7 @@ const BlogPage = ({ data }) => {
                     </article>
                 ))
             }
+            <Link to={"/"} className={"back-link"}>  Go back to the homepage </Link>
         </Layout>
     )
 }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 const BlogPost = ({ data, children }) => {
     return (
         <div>
@@ -9,7 +9,10 @@ const BlogPost = ({ data, children }) => {
             <p>{data.mdx.frontmatter.date}</p>
             <p>{data.mdx.frontmatter.type}</p>
             {children}
+
+            <Link to={"/"} className={"back-link"}>  Go back to the Series page </Link>
         </Layout>
+
 
         </div>
     )
