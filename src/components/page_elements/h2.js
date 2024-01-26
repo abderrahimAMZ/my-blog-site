@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { AutoLink} from "./heading-link"
-export const StyledH1 = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize['4xl']};
+export const StyledH2 = styled.h2`
+  font-size: ${({ theme }) => theme.fontSize['3xl']};
   font-family: ${({ theme }) => theme.font.serif};
-  margin-top: ${({ theme }) => theme.spacing[8]};
+  margin-top: ${({ theme }) => theme.spacing[6]};
   line-height: ${({ theme }) => theme.lineHeight.none};
     a {
         float: left;
@@ -23,6 +24,6 @@ export const StyledH1 = styled.h1`
     }
 `
 
-export const H1 = props => {
-    return <StyledH1 {...props}>{props.children}</StyledH1>
+export const H2 = props => {
+    return <StyledH2 {...props}>{props.children}</StyledH2>
 }

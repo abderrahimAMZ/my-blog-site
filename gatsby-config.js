@@ -48,6 +48,9 @@ module.exports = {
           resolve: `gatsby-transformer-remark`,
           options: {
               plugins: [
+                  `gatsby-remark-autolink-headers`,
+                    `gatsby-remark-prismjs`,
+
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
@@ -65,13 +68,34 @@ module.exports = {
                           className: "table-of-contents"
                       },
                   },
-                  `gatsby-remark-autolink-headers`,
               ],
           },
       },
       `gatsby-plugin-styled-components`,
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
-
+        `gatsby-plugin-sharp`,
+      {
+          resolve: `gatsby-plugin-manifest`,
+          options: {
+              name: `gatsby-starter-default`,
+              short_name: `starter`,
+              start_url: `/`,
+              background_color: `#663399`,
+              theme_color: `#663399`,
+              display: `minimal-ui`,
+              icon: `images/icons8-code-64.png`, // This path is relative to the root of the site.
+          },
+      },
+      {
+          resolve: `gatsby-plugin-google-fonts`,
+          options: {
+              fonts: [
+                  `cambay\:400,700`,
+                  `arvo\:400,700`,
+                  `ubuntu mono\:400,700`,
+              ],
+          },
+      },
   ],
 }

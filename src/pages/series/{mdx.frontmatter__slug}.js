@@ -2,7 +2,6 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import {graphql, Link} from 'gatsby'
-import Contents from "../../components/Contents";
 import styled from "styled-components";
 
 const Toc = styled.ul`
@@ -12,6 +11,10 @@ const Toc = styled.ul`
   max-height: 70vh;
   width: 310px;
   display: flex;
+    li {
+        line-height: ${({ theme }) => theme.lineHeight.tight};
+        margin-top: ${({ theme }) => theme.spacing[3]};
+    }
 `
 
 const InnerScroll = styled.div`

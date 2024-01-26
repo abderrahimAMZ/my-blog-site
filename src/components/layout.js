@@ -8,7 +8,9 @@ import { container,
     navLinkText,
     siteTitle
 
-} from "./layout.module.css";
+}
+   from "./layout.module.css";
+
 import Navbar from "./navbar";
 import Footer from "./footer";
 import {StaticImage} from "gatsby-plugin-image";
