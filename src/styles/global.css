@@ -99,6 +99,19 @@ h4 {
 }
 .back-link {
     font-size: 1.2em;
-    background-color: rebeccapurple/* Adjust this to the desired font size */
+    color: rebeccapurple/* Adjust this to the desired font size */
     /* Other styles... */
+}
+.table-of-content {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 5%;
+}
+
+.light.table-of-content {
+    background-color: #f0f0f0;
+}
+
+.dark.table-of-content {
+    background-color: #1f2937;
 }

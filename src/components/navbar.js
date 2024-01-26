@@ -51,7 +51,7 @@ export default function Navbar() {
                                 <div className="flex flex-shrink-0 items-center">
                                     <StaticImage
                                         className="h-8 w-auto"
-                                        src="../../images/icons8-inspect-code-48.png"
+                                        src="../../images/icons8-code-64.png"
                                         alt="Your Company"
                                     />
                                 </div>

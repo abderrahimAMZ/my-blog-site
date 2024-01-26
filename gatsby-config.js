@@ -10,19 +10,6 @@ module.exports = {
       "gatsby-plugin-image",
       "gatsby-plugin-sharp",
       {
-          resolve: `gatsby-transformer-remark`,
-          options: {
-              plugins: [
-                  {
-                      resolve: `gatsby-remark-images`,
-                      options: {
-                          maxWidth: 800,
-                      },
-                  },
-              ],
-          },
-      },
-      {
           resolve : "gatsby-source-filesystem",
           options : {
               name: `articles`,
@@ -49,15 +36,6 @@ module.exports = {
                           maxWidth: 630,
                       },
                   },
-                  /*
-                  {
-                      resolve: `gatsby-remark-responsive-iframe`,
-                      options: {
-                          wrapperStyle: `margin-bottom: 1.0725rem`,
-                      },
-                  },
-
-                   */
               ],
 
           },
@@ -65,6 +43,35 @@ module.exports = {
       `gatsby-remark-copy-linked-files`,
       `gatsby-remark-smartypants`,
       "gatsby-remark-images",
-      "gatsby-plugin-postcss"
+      "gatsby-plugin-postcss",
+      {
+          resolve: `gatsby-transformer-remark`,
+          options: {
+              plugins: [
+                  {
+                      resolve: `gatsby-remark-images`,
+                      options: {
+                          maxWidth: 800,
+                      },
+                  },
+                  {
+                      resolve: `gatsby-remark-table-of-contents`,
+                      options: {
+                          exclude: "Table of Contents",
+                          tight: false,
+                          ordered: false,
+                          fromHeading: 1,
+                          toHeading: 6,
+                          className: "table-of-contents"
+                      },
+                  },
+                  `gatsby-remark-autolink-headers`,
+              ],
+          },
+      },
+      `gatsby-plugin-styled-components`,
+      `gatsby-plugin-react-helmet`,
+      `gatsby-transformer-sharp`,
+
   ],
 }

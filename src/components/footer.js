@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://github.com/abderrahimAMZ" className="flex items-center">
-                            <StaticImage src="../../images/icons8-inspect-code-48.png"  className="h-8 me-3" alt="TeaCode" />
+                            <StaticImage src="../../images/icons8-code-64.png" className="h-8 me-3" alt="TeaCode" />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CodeInspect</span>
                         </a>
                     </div>
