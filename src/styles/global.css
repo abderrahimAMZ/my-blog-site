@@ -115,3 +115,33 @@ h4 {
 .dark.table-of-content {
     background-color: #1f2937;
 }
+
+.header-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.date {
+
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tag {
+    margin: 0.3rem;
+}
+.light .tag {
+    background-color: rebeccapurple;
+    border-radius: 15%;
+}
+.dark .tag {
+    background-color: #E30B5C;
+    border-radius: 15%;
+}
+
+a {
+    text-decoration: underline;
+}

@@ -95,11 +95,118 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.font.sans};
     font-size: ${({ theme }) => theme.fontSize.lg};
-    color: ${({ theme }) => theme.colour.grey[900]};
   }
   body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
-    background-color: ${({ theme }) => theme.colour.white};
   }
+
+  h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+  }
+
+  /* Heading 2 */
+  h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+  }
+
+  /* Heading 3 */
+  h3 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+  }
+
+  /* Heading 4 */
+  h4 {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+  }
+
+  .my-footer {
+      background: rebeccapurple;
+  }
+
+  :root {
+      --clr-bg-dark: #1f2937; /* gray-800 */
+      --clr-bg-light: #fafafa; /* zinc-50 */
+
+      --clr-text-dark: #fff; /* gray-200 */
+      --clr-text-light: #fafafa; /* zinc-50 */
+  }
+
+  .dark {
+      background-color: var(--clr-bg-dark);
+      color: var(--clr-text-dark);
+  }
+
+
+  .light {
+      background-color: var(--clr-bg-light);
+  }
+  .dark {
+      @apply bg-gray-800 text-zinc-50;
+  }
+
+  .dark {
+      background-color: #282c34;
+  }
+
+  article {
+      padding: 16px;
+      margin-bottom: 16px;
+  }
+  .light article {
+      background-color: #f0f0f0; /* Adjust this to the desired shade of grey */
+      border-radius: 5%;
+  }
+
+
+  .dark article {
+      background-color: #1f2937;
+      border-radius: 5%;
+  }
+
+
+  .light h2 a{
+      color: #000000;
+  }
+  .light h2 a:hover{
+      color: rebeccapurple;
+  }
+
+  .dark h2 a:hover{
+      color: #E30B5C;
+  }
+  .back-link {
+      font-size: 1.2em;
+      color: rebeccapurple/* Adjust this to the desired font size */
+      /* Other styles... */
+  }
+  .table-of-content {
+      padding: 16px;
+      margin-bottom: 16px;
+      border-radius: 5%;
+  }
+
+  .light.table-of-content {
+      background-color: #f0f0f0;
+  }
+
+  .dark.table-of-content {
+      background-color: #1f2937;
+  }
+  
   `

@@ -31,6 +31,8 @@ const BlogPost = ({ data, children }) => {
             <Layout pageTitle={data.mdx.frontmatter.title}>
 
                 <p>{data.mdx.frontmatter.date}</p>
+                Author : <Link to={data.mdx.frontmatter.author_github} alt={"author link"}>{data.mdx.frontmatter.author}</Link>
+                <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
                 {typeof tableOfContents.items === 'undefined' ? null : (
                     <Toc>
                         <InnerScroll>
@@ -61,6 +63,9 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
+           author
+           author_github
+           time
       }
       tableOfContents
     }

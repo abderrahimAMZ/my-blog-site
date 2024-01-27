@@ -15,6 +15,8 @@ const BlogPage = ({ data }) => {
                             </Link>
                         </h2>
                         <p>Posted: {node.frontmatter.date}</p>
+                        Author : <Link to={node.frontmatter.author_github} alt={"author link"}>{node.frontmatter.author}</Link>
+                        <p className={"read-time"}>{node.frontmatter.time} Read</p>
                     </article>
                 ))
             }
@@ -31,6 +33,9 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+        author
+        author_github
+        time
         }
         id
       }
