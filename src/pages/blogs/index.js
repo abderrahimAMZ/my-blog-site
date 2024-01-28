@@ -21,14 +21,14 @@ const BlogPage = ({ data }) => {
                     </article>
                 ))
             }
-            <Link to={"/articles"} className={"back-link"}> Go Back Up  </Link>
+            <Link to={"/blogs"} className={"back-link"}> Go Back Up  </Link>
         </Layout>
     )
 }
 
 export const query = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC }}, filter: {frontmatter: {type: {eq : "article"}}}) {
+    allMdx(sort: { frontmatter: { date: DESC }}, filter: {frontmatter: {type: {eq : "blog"}}}) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
