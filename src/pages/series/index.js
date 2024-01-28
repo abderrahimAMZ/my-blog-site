@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => {
                     </article>
                 ))
             }
-            <Link to={"/"} className={"back-link"}> <StaticImage src={"../../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </Link>
+            <Link to={"/series"} className={"back-link"}> Go Back Up  </Link>
         </Layout>
     )
 }

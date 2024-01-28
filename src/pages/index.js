@@ -26,10 +26,7 @@ const IndexPage = ({data}) => {
 
 
                 }
-                <div className={"go-back-link"}>
-                    <Link to={"/"} className={"back-link"}> <StaticImage src={"../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </Link>
-
-                </div>
+                <Link to={"/"} className={"back-link"}> Go Back Up  </Link>
 
             </Layout>
         </main>

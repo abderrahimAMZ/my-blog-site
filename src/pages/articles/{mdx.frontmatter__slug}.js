@@ -50,8 +50,8 @@ const BlogPost = ({ data, children }) => {
                 )}
 
                 {children}
+                <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
             </Layout>
-            <a href={"/"} className={"back-link"}> <img src={"../../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </a>
 
 
         </div>

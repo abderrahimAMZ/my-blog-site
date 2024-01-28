@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => {
                     </article>
                 ))
             }
-            <Link to={"/"} className={"back-link"}> Go Back to List  </Link>
+            <Link to={"/articles"} className={"back-link"}> Go Back Up  </Link>
         </Layout>
     )
 }

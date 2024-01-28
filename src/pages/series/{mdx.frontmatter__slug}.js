@@ -47,9 +47,9 @@ const BlogPost = ({ data, children }) => {
             <p>{data.mdx.frontmatter.type}</p>
             {children}
 
+            <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
         </Layout>
 
-            <Link to={"/"} className={"back-link"}> <StaticImage src={"../../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </Link>
 
         </div>
     )
