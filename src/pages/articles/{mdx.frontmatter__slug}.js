@@ -3,6 +3,7 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
+import {StaticImage} from "gatsby-plugin-image";
 
 
 const Toc = styled.ul`
@@ -49,8 +50,8 @@ const BlogPost = ({ data, children }) => {
                 )}
 
                 {children}
-                <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
             </Layout>
+            <a href={"/"} className={"back-link"}> <img src={"../../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </a>
 
 
         </div>

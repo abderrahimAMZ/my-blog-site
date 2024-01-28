@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import {StaticImage} from "gatsby-plugin-image";
 
 const BlogPage = ({ data }) => {
     return (
@@ -20,7 +21,7 @@ const BlogPage = ({ data }) => {
                     </article>
                 ))
             }
-            <Link to={"/"} className={"back-link"}>  Go back to the homepage </Link>
+            <Link to={"/"} className={"back-link"}> Go Back to List  </Link>
         </Layout>
     )
 }

@@ -208,5 +208,9 @@ export const GlobalStyle = createGlobalStyle`
   .dark.table-of-content {
       background-color: #1f2937;
   }
+  p {
+      font-family: "Merriweather", "Source Code Pro", sans-serif;
+      font-size: 22px;
+  }
   
   `

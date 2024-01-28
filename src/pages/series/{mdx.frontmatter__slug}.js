@@ -3,6 +3,7 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
+import {StaticImage} from "gatsby-plugin-image";
 
 const Toc = styled.ul`
   position: fixed;
@@ -46,9 +47,9 @@ const BlogPost = ({ data, children }) => {
             <p>{data.mdx.frontmatter.type}</p>
             {children}
 
-            <Link to={"/"} className={"back-link"}>  Go back to the Series page </Link>
         </Layout>
 
+            <Link to={"/"} className={"back-link"}> <StaticImage src={"../../../images/icons8-arrow-pointing-left-50.png"} alt={"go back link"} />  </Link>
 
         </div>
     )
