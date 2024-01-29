@@ -210,7 +210,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   p {
       font-family: "Merriweather", "Source Code Pro", sans-serif;
-      font-size: 22px;
+      font-size: 18px;
   }
   
   `
