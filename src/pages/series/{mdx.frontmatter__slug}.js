@@ -26,33 +26,38 @@ const BlogPost = ({ data, children }) => {
     const  tableOfContents = data.mdx.tableOfContents;
     return (
         <div>
-        <Layout pageTitle={data.mdx.frontmatter.title}>
-            <p>{data.mdx.frontmatter.date}</p>
-            Author : <Link to={data.mdx.frontmatter.author_github} alt={"author link"}>{data.mdx.frontmatter.author}</Link>
-            <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
-            {typeof tableOfContents.items === 'undefined' ? null : (
-                <Toc>
-                    <InnerScroll>
-                        <h2>Table of contents</h2>
-                        {tableOfContents.items.map(i => (
-                            <li key={i.url}>
-                                <a href={i.url} key={i.url}>
-                                    {i.title}
-                                </a>
-                            </li>
-                        ))}
-                    </InnerScroll>
-                </Toc>
-            )}
-            <p>{data.mdx.frontmatter.type}</p>
-            {children}
+            <Layout pageTitle={data.mdx.frontmatter.title}>
 
-            <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
-        </Layout>
+                <div className={"blog-post"}>
+                    <p>{data.mdx.frontmatter.date}</p>
+                    Author : <Link to={data.mdx.frontmatter.author_github}
+                                   alt={"author link"}>{data.mdx.frontmatter.author}</Link>
+                    <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
+                </div>
+
+                    {typeof tableOfContents.items === 'undefined' ? null : (
+                        <Toc>
+                            <InnerScroll>
+                                <h2>Table of contents</h2>
+                                {tableOfContents.items.map(i => (
+                                    <li key={i.url}>
+                                        <a href={i.url} key={i.url}>
+                                            {i.title}
+                                        </a>
+                                    </li>
+                                ))}
+                            </InnerScroll>
+                        </Toc>
+                    )}
+                    <p>{data.mdx.frontmatter.type}</p>
+                    {children}
+
+                    <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
+            </Layout>
 
 
         </div>
-    )
+)
 }
 
 export const query = graphql`

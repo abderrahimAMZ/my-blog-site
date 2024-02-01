@@ -154,3 +154,6 @@ p {
     font-family: "Merriweather", "Source Code Pro", sans-serif;
     font-size: 18px;
 }
+.blog-post {
+    margin-bottom: 2rem;
+}

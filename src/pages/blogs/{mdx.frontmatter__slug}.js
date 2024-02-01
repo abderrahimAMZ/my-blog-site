@@ -31,9 +31,13 @@ const BlogPost = ({ data, children }) => {
         <div>
             <Layout pageTitle={data.mdx.frontmatter.title}>
 
+                <div className={"blog-post"}>
+
                 <p>{data.mdx.frontmatter.date}</p>
                 Author : <Link to={data.mdx.frontmatter.author_github} alt={"author link"}>{data.mdx.frontmatter.author}</Link>
                 <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
+                </div>
+
                 {typeof tableOfContents.items === 'undefined' ? null : (
                     <Toc>
                         <InnerScroll>
