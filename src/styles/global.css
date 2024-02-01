@@ -142,7 +142,7 @@ h4 {
     border-radius: 15%;
 }
 
-a {
+a:hover {
     text-decoration: underline;
 }
 .go-back-link {
