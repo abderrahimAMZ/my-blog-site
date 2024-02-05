@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import {StaticImage} from "gatsby-plugin-image";
+import {H2} from "../../components/page_elements";
 
 const BlogPage = ({ data }) => {
     return (
@@ -10,11 +11,14 @@ const BlogPage = ({ data }) => {
             {
                 data.allMdx.nodes.map(node => (
                     <article key={node.id}>
+                        <H2>
+
                         <h2>
                             <Link to={`/series/${node.frontmatter.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>
+                        </H2>
                         <p>Posted: {node.frontmatter.date}</p>
                         Author : <Link to={node.frontmatter.author_github} alt={"author link"}>{node.frontmatter.author}</Link>
                         <p className={"read-time"}>{node.frontmatter.time} Read</p>

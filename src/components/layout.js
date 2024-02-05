@@ -15,6 +15,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import {StaticImage} from "gatsby-plugin-image";
 import {useContext} from "react";
+import {H1} from "./page_elements";
 const Layout = ({pageTitle,children}) => {
 
     /*
@@ -46,10 +47,11 @@ const Layout = ({pageTitle,children}) => {
             {data.site.siteMetadata.title}
             </header>
             <main className={"mb-52 font-serif "}>
+                <H1>
                 <h1 className={heading}>
                     {pageTitle}
 
-                </h1>
+                </h1></H1>
                 {children}
             </main>
 

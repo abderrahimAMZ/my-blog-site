@@ -101,39 +101,6 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
   }
 
-  h1 {
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      line-height: 1.2;
-  }
-
-  /* Heading 2 */
-  h2 {
-      font-size: 1.8em;
-      font-weight: bold;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-      line-height: 1.2;
-  }
-
-  /* Heading 3 */
-  h3 {
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-top: 1.2em;
-      margin-bottom: 0.5em;
-      line-height: 1.2;
-  }
-
-  /* Heading 4 */
-  h4 {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-      line-height: 1.2;
-  }
 
   .my-footer {
       background: rebeccapurple;
@@ -207,10 +174,6 @@ export const GlobalStyle = createGlobalStyle`
 
   .dark.table-of-content {
       background-color: #1f2937;
-  }
-  p {
-      font-family: "Merriweather", "Source Code Pro", sans-serif;
-      font-size: 18px;
   }
   
   `
