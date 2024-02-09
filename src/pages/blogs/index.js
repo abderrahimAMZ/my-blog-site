@@ -13,7 +13,7 @@ const BlogPage = ({ data }) => {
                     <article key={node.id}>
                         <H2>
                             <h2>
-                            <Link to={`/series/${node.frontmatter.slug}`}>
+                            <Link to={`/blogs/${node.frontmatter.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>

@@ -17,8 +17,8 @@ import {Image} from "react-bootstrap"
 const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
-    { name: 'series', href: '/series', current: false },
-    { name: 'blogs', href: '/blogs', current: false },
+    { name: 'Series', href: '/series', current: false },
+    { name: 'Blogs', href: '/blogs', current: false },
 ]
 
 function classNames(...classes) {

@@ -175,5 +175,8 @@ export const GlobalStyle = createGlobalStyle`
   .dark.table-of-content {
       background-color: #1f2937;
   }
+  img {
+      margin : 10px;
+  }
   
   `
