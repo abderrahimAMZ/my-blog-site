@@ -31,14 +31,12 @@ defaults:
 
 
 jobs:
+
   build:
+
     runs-on: self-hosted
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Build the Docker image
-        uses: docker/build-push-action@v2
-        run: docker build . --file Dockerfile --tag gatsby-blogging-site:$(date +%s)
-      - name: Run the Docker container
-        run: docker run -p 8000:80 gatsby-blogging-site:$(date +%s)
+        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
