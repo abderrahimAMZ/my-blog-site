@@ -31,12 +31,13 @@ defaults:
 
 
 jobs:
-
   build:
 
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        run: docker build -t java-app .
+      - name: Run the Docker image
+        run: docker run -d -p 8080:8080 java-app
