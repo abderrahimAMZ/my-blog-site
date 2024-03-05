@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `id`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Code4Coding`,
+    siteUrl: `https://www.code4coding.tech`,
   },
   plugins: [
       "gatsby-plugin-image",
