@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Code4Coding`,
+    title: `Welcome to, Code4Coding!`,
     siteUrl: `https://www.code4coding.tech`,
   },
   plugins: [

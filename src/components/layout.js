@@ -44,7 +44,7 @@ const Layout = ({pageTitle,children}) => {
         <Navbar />
         <div className={container}>
             <header className={siteTitle}>
-            {data.site.siteMetadata.title}
+                {data.site.siteMetadata.title}
             </header>
             <main className={"mb-52 font-serif "}>
                 <H1>
