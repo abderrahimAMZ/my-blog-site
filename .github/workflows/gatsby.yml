@@ -38,10 +38,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: stop running container
-        run: docker stop gatsby-app || true
+        run: docker stop gatsby-app-container || true
       - name: remove old Docker container
-        run: docker rm -f gatsby-app || true
+        run: docker rm -f gatsby-app-container || true
       - name: Build the Docker image
         run: docker build -t gatsby-app .
       - name: Run the Docker image
-        run: docker run -d -p 8080:80 gatsby-app
+        run: docker run -d -p 8080:80 --name gatsby-app-container gatsby-app
