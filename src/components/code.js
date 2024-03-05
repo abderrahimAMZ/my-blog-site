@@ -50,13 +50,7 @@ const Code = props => {
             <div style={{ display: "flex", position: "relative" }}>
                 <div
                     style={{
-                        background: "#BAAD81",
-                        marginRight: "1rem",
-                        paddingLeft: "0.5rem",
-                        paddingRight: "0.5rem",
                         textTransform: "uppercase",
-                        borderBottomLeftRadius: "0.5rem",
-                        borderBottomRightRadius: "0.5rem",
                         fontFamily: "Montserrat",
                         fontWeight: "bold",
                         textAlign: "center",
@@ -64,7 +58,7 @@ const Code = props => {
                         justifyContent: "center",
                         alignItems: "center",
                     }}
-                >{`${language}`}</div>
+                ></div>
                 <div
                     style={{
                         color: "#9d9d9d",
@@ -106,6 +100,8 @@ const Code = props => {
                     overflow: "auto",
                     background: "#011627",
                     borderRadius: "0.5rem",
+                    paddingBottom: "1rem",
+
                 }}
             >
                 <Highlight

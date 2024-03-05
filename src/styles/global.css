@@ -133,3 +133,14 @@ a:hover {
 img {
     margin : 10px;
 }
+
+ul, ol {
+    list-style: initial;
+    margin-left: 1rem;
+    padding: initial;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
