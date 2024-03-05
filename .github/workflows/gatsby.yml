@@ -40,6 +40,6 @@ jobs:
       - name: Stop and remove old Docker container
         run: docker rm -f gatsby-app || true
       - name: Build the Docker image
-        run: sudo docker build -t gatsby-app .
+        run: docker build -t gatsby-app .
       - name: Run the Docker image
-        run: sudo docker run -d -p 8080:80 gatsby-app
+        run: docker run -d -p 8080:80 gatsby-app
