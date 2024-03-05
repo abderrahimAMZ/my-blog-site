@@ -40,7 +40,7 @@ jobs:
       - name: stop running container
         run: docker stop gatsby-app-container || true
       - name: remove old Docker container
-        run: docker rm -f gatsby-app-container || true
+        run: docker rm gatsby-app-container || true
       - name: Build the Docker image
         run: docker build -t gatsby-app .
       - name: Run the Docker image
