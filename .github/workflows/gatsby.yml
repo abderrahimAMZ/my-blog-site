@@ -38,6 +38,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-        run: docker build -t java-app .
+        run: sudo docker build -t java-app .
       - name: Run the Docker image
-        run: docker run -d -p 8080:8080 java-app
+        run: sudo docker run -d -p 8080:8080 java-app
