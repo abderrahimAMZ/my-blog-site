@@ -37,7 +37,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Stop and remove old Docker container
+      - name: stop running container
+        run: docker stop gatsby-app || true
+      - name: remove old Docker container
         run: docker rm -f gatsby-app || true
       - name: Build the Docker image
         run: docker build -t gatsby-app .
