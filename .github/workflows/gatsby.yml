@@ -41,6 +41,8 @@ jobs:
         run: docker stop gatsby-app-container || true
       - name: remove old Docker container
         run: docker rm gatsby-app-container || true
+      - name: kill process on port 8080
+        run: fuser -k 8080/tcp || true
       - name: Build the Docker image
         run: docker build -t gatsby-app .
       - name: Run the Docker image
