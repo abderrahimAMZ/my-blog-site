@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Welcome to, CodeInspect!`,
+    title: `id`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
