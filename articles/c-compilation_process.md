@@ -1,12 +1,13 @@
 ---
 title: "C Compilation Process Explained"
 date: "2024-02-16"
-slug: "c-compilation-process"
+slug: "c-compilation-process-part2"
 type: "blog"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
 time : "10 min"
 description: "C compilation process explained in details"
+thumbnail: ../images/c-compilation-process/c-compilation-process-global.png
 ---
 
 

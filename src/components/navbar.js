@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
 import {Link} from "gatsby"
-
+import {theme} from "../theme/global-style"
 import {ModeContext} from "./ModeProvider"
 import {useContext} from "react"
 
@@ -29,7 +29,7 @@ export default function Navbar() {
     const [darkMode, toggleDarkMode] = useContext(ModeContext);
 
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className={darkMode ? "bg-gray-700": "bg-gray-100"}>
             {({ open }) => (
                 <>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
                                                 }}
                                                 to={item.href}
                                                 className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                    item.current ? darkMode ? 'bg-gray-900 text-white' :'bg-gray-300 text-gray-500'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -106,7 +106,7 @@ export default function Navbar() {
                                     as="a"
                                     href={item.href}
                                     className={classNames(
-                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        item.current ? 'bg-gray-400 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                         'block rounded-md px-3 py-2 text-base font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}

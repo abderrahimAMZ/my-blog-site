@@ -5,8 +5,8 @@ import ModeProvider from "./ModeProvider";
 import {theme, GlobalStyle} from "../theme/global-style";
 import {ThemeProvider} from "styled-components";
 import {H1, H2, P} from "./page_elements";
-
 import AutoLinkedHeading from "./autoLinkedHeading";
+import {CssBaseline} from "@mui/material";
 
 // i need to make H1 and H2 as  links to the heading how to do that?
 //
@@ -25,6 +25,7 @@ const components = {
 
 export const wrapRootElement = ({ element }) => {
     return <ThemeProvider theme={theme}>
+
         <GlobalStyle/>
      <ModeProvider>
          <MDXProvider components={components}>{element}</MDXProvider>

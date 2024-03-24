@@ -7,7 +7,7 @@ author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
 time : "10 min"
 description: "i will explain to you the SDLC-V model and how it works in embedded development."
-
+thumbnail: ../images/v_cycle_assets/v-cycle-explained-1.png
 ---
 
 

@@ -5,41 +5,30 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import {StaticImage} from "gatsby-plugin-image";
 import {H2} from "../components/page_elements";
+import Img from "gatsby-image";
+import {Card, CardActions, CardContent, CardMedia, Button, Typography, Grid} from "@mui/material";
+import HomeLayout from "../components/homeLayout";
+import {useState} from "react";
+import CarteBlog from "../components/CarteBlog";
 
 const IndexPage = ({data}) => {
+    const [state, setState] = useState({
+        raised:false,
+        shadow:1,
+    })
     return (
         <main>
-            <Layout pageTitle="Home page">
+            <HomeLayout pageTitle="Home page">
+                <div className={"flex flex-wrap justify-center items-center"}>
                 {
                     data.allMdx.nodes.map(node => (
-                        <article key={node.id}>
-                            {
-                                node.frontmatter.type === "blog" ?
-                                    <H2>
-                                        <Link to={`/blogs/${node.frontmatter.slug}`}>
-                                            {node.frontmatter.title}
-                                        </Link>
-                                    </H2>
-                                    : <H2>
-                                        <Link to={`/series/${node.frontmatter.slug}`}>
-                                            {node.frontmatter.title}
-                                        </Link>
-                                    </H2>
-
-                            }
-                            <p className={"date"}>Posted: {node.frontmatter.date}</p>
-                            Author : <Link to={node.frontmatter.author_github}
-                                           alt={"author link"}>{node.frontmatter.author}</Link>
-                            <p className={"read-time"}>{node.frontmatter.time} Read</p>
-
-                        </article>
+                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} />
                     ))
-
-
                 }
+                </div>
                 <Link to={"/"} className={"back-link"}> Go Back Up  </Link>
 
-            </Layout>
+            </HomeLayout>
         </main>
     )
 }
@@ -53,6 +42,11 @@ export const query = graphql`
           title
           slug
            author
+           thumbnail {
+            childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
+            }}}
            author_github
            time
            type

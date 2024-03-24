@@ -1,10 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 export const theme = {
     colour: {
-        black: '#000',
-        white: '#fff',
+        black: '#121212',
+        white: '#DEE4E7',
         grey: {
             100: '#f7fafc',
             200: '#edf2f7',
@@ -18,7 +22,7 @@ export const theme = {
         },
     },
     font: {
-        sans: 'Cambay, san-serif',
+        sans: 'roboto, Cambay, san-serif',
         serif: 'Arvo, serif',
         monospace: '"Ubuntu Mono", monospace',
     },
@@ -94,7 +98,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.font.sans};
-    font-size: ${({ theme }) => theme.fontSize.lg};
+    font-size: ${({ theme }) => theme.fontSize.xl};
   }
   body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
@@ -107,7 +111,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-      --clr-bg-dark: #1f2937; /* gray-800 */
+      --clr-bg-dark: #1B1B1D; /* gray-800 */
       --clr-bg-light: #fafafa; /* zinc-50 */
 
       --clr-text-dark: #fff; /* gray-200 */
@@ -122,9 +126,6 @@ export const GlobalStyle = createGlobalStyle`
 
   .light {
       background-color: var(--clr-bg-light);
-  }
-  .dark {
-      @apply bg-gray-800 text-zinc-50;
   }
 
   .dark {
@@ -157,26 +158,8 @@ export const GlobalStyle = createGlobalStyle`
   .dark h2 a:hover{
       color: #E30B5C;
   }
-  .back-link {
-      font-size: 1.2em;
-      color: rebeccapurple/* Adjust this to the desired font size */
-      /* Other styles... */
-  }
-  .table-of-content {
-      padding: 16px;
-      margin-bottom: 16px;
-      border-radius: 5%;
-  }
-
-  .light.table-of-content {
-      background-color: #f0f0f0;
-  }
-
-  .dark.table-of-content {
-      background-color: #1f2937;
-  }
   img {
-      margin : 10px;
+      margin : 15px;
   }
   
   `
