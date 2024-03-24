@@ -17,7 +17,7 @@ thumbnail: ../images/v_cycle_assets/v-cycle-explained-1.png
 
 ![SDLC-V model image ](../images/v_cycle_assets/v-cycle-explained-1.png)
 
-
+> *idk what s going on here 😂*
 
 Hi everyone 👋,
 

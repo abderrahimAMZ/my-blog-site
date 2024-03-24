@@ -5,23 +5,6 @@ import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
 import {StaticImage} from "gatsby-plugin-image";
 
-const Toc = styled.ul`
-  position: fixed;
-  left: calc(50% + 400px);
-  top: 110px;
-  max-height: 70vh;
-  width: 310px;
-  display: flex;
-    li {
-        line-height: ${({ theme }) => theme.lineHeight.tight};
-        margin-top: ${({ theme }) => theme.spacing[3]};
-    }
-`
-
-const InnerScroll = styled.div`
-  overflow: hidden;
-  overflow-y: scroll;
-`
 const BlogPost = ({ data, children }) => {
     const  tableOfContents = data.mdx.tableOfContents;
     return (
@@ -35,20 +18,25 @@ const BlogPost = ({ data, children }) => {
                     <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
                 </div>
 
-                    {typeof tableOfContents.items === 'undefined' ? null : (
-                        <Toc>
-                            <InnerScroll>
-                                <h2>Table of contents</h2>
-                                {tableOfContents.items.map(i => (
-                                    <li key={i.url}>
-                                        <a href={i.url} key={i.url}>
-                                            {i.title}
-                                        </a>
-                                    </li>
-                                ))}
-                            </InnerScroll>
-                        </Toc>
-                    )}
+                {typeof tableOfContents.items === undefined ? null : (
+                    <div
+                        className={"table-of-content mt-10 mb-10 w-full bg-gray-200 dark:bg-gray-900 px-4 py-3 text-left light:text-gray-800 dark:text-gray-100 break-words max-w-md rounded"}>
+                        <div className="mx-auto text-xl font-semibold"><strong>Table of content</strong></div>
+                        {tableOfContents.items === undefined ? null :
+                            <ul>
+                                {
+                                    tableOfContents.items.map(i => (
+                                        <li className={"mt-2 list-none px-2 pl-6"} key={i.url}>
+                                            <a className={" block hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded table-of-content"} href={i.url} key={i.url}>
+                                                {i.title}
+                                            </a>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        }
+                    </div>
+                )}
                     <p>{data.mdx.frontmatter.type}</p>
                     {children}
 

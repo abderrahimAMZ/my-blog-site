@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const StyledP = styled.p`
   margin-top: ${({ theme }) => theme.spacing[2]};
     font-family: ${({ theme }) => theme.font.sans};
+    font-size: ${({ theme }) => theme.fontSize.lg};
   strong {
     font-weight: bold;
   }

@@ -2,7 +2,7 @@
 title: "C Compilation Process Explained"
 date: "2024-02-16"
 slug: "c-compilation-process-part2"
-type: "blog"
+type: "serie"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
 time : "10 min"
@@ -24,9 +24,6 @@ In this blog, we will take a look at the C compilation process details. We will 
 
 
 !["picture explaining the c compilation process"](../images/c-compilation-process/c-compilation-process-global.png)
-
-
-<p></p>
 
 as you see in the picture above, the C compilation process is divided into 5 main steps:
 

@@ -22,7 +22,7 @@ const IndexPage = ({data}) => {
                 <div className={"flex flex-wrap justify-center items-center"}>
                 {
                     data.allMdx.nodes.map(node => (
-                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} />
+                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug}/>
                     ))
                 }
                 </div>

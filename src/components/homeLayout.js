@@ -44,9 +44,8 @@ const Layout = ({pageTitle,children}) => {
             <Navbar />
             <div className={WiderContainer}>
                 <header className={siteTitle}>
-                    {data.site.siteMetadata.title}
                 </header>
-                <main className={"mb-52 font-serif "}>
+                <main className={"mb-52 md:ml-6 md:mr-6 sm:ml-4 sm:mr-4 main"}>
                     <H1>
                         <h1 className={heading}>
                             {pageTitle}

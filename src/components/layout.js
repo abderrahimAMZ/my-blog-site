@@ -42,17 +42,17 @@ const Layout = ({pageTitle,children}) => {
         <div className={`dark:bg-black dark:text-white ${darkMode ? "dark" : "light"}`}>
 
         <Navbar />
-        <div className={container}>
-            <header className={siteTitle}>
-                {data.site.siteMetadata.title}
-            </header>
-            <main className={"mb-52 font-serif "}>
-                <H1>
-                <h1 className={heading}>
-                    {pageTitle}
+            <div className={container}>
+                <header >
+                    <H1>
+                        <div className={"page-title mt-20 "}>
+                        {pageTitle}
+                        </div>
+                    </H1>
 
-                </h1></H1>
-                {children}
+            </header>
+            <main className={"mb-52 font-serif main"}>
+                    {children}
             </main>
 
         </div>

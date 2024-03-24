@@ -20,10 +20,11 @@ export const theme = {
             800: '#2d3748',
             900: '#1a202c',
         },
+        highlight: '#4E505C',
     },
     font: {
         sans: 'roboto, Cambay, san-serif',
-        serif: 'Arvo, serif',
+        serif: 'Nurito, Arvo, serif',
         monospace: '"Ubuntu Mono", monospace',
     },
     lineHeight: {
@@ -89,7 +90,6 @@ export const theme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
-  ${reset}
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -98,11 +98,25 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.font.sans};
-    font-size: ${({ theme }) => theme.fontSize.xl};
+    font-size: ${({ theme }) => theme.fontSize.base};
   }
   body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
+      font-family: ${({ theme }) => theme.font.sans};
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-family: ${({ theme }) => theme.font.sans};
+    font-size: ${({ theme }) => theme.fontSize.lg};  
+  }
+  ol {
+      list-style-type: decimal;
+      margin-left: 20px;
+      font-family: ${({ theme }) => theme.font.sans};
+      font-size: ${({ theme }) => theme.fontSize.lg};
   }
 
 
@@ -132,28 +146,7 @@ export const GlobalStyle = createGlobalStyle`
       background-color: #282c34;
   }
 
-  article {
-      padding: 16px;
-      margin-bottom: 16px;
-  }
-  .light article {
-      background-color: #f0f0f0; /* Adjust this to the desired shade of grey */
-      border-radius: 5%;
-  }
 
-
-  .dark article {
-      background-color: #1f2937;
-      border-radius: 5%;
-  }
-
-
-  .light h2 a{
-      color: #000000;
-  }
-  .light h2 a:hover{
-      color: rebeccapurple;
-  }
 
   .dark h2 a:hover{
       color: #E30B5C;
@@ -161,5 +154,38 @@ export const GlobalStyle = createGlobalStyle`
   img {
       margin : 15px;
   }
+  .color-highlight {
+      background-color: #718096
+  }
+  .table-of-contents {
+      font-family: 'Roboto', sans-serif
+  }
+  .blog-post {
+      font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+      margin-left : 10px;
+      
+  }
   
-  `
+  .gatsby-resp-image-image {
+      margin : 8px !important;
+      width : 100% !important;
+      height : 99% !important ;
+  }
+  .gatsby-resp-image-image {
+      margin-bottom: 2rem;
+  }
+  .page-title {
+      color: rebeccapurple;
+      font-size : 46px;
+  }
+  .about {
+      font-size : 22px;
+      margin-top : 20px;
+      font-family: 'Roboto', sans-serif;
+  }
+  .main {
+      margin-left: 6px;
+      margin-right: 6px;
+  }
+`

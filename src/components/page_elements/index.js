@@ -1,3 +1,5 @@
 export * from './h1'
 export * from './p'
 export * from './h2'
+export * from './h3'
+export * from '../Toc'

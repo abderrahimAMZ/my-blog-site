@@ -4,28 +4,22 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import {StaticImage} from "gatsby-plugin-image";
 import {H2} from "../../components/page_elements";
+import HomeLayout from "../../components/homeLayout";
+import CarteBlog from "../../components/CarteBlog";
 
 const BlogPage = ({ data }) => {
     return (
-        <Layout pageTitle="My Blog Posts">
-            {
-                data.allMdx.nodes.map(node => (
-                    <article key={node.id}>
-                        <H2>
-                            <h2>
-                            <Link to={`/blogs/${node.frontmatter.slug}`}>
-                                {node.frontmatter.title}
-                            </Link>
-                        </h2>
-                        </H2>
-                        <p>Posted: {node.frontmatter.date}</p>
-                        Author : <Link to={node.frontmatter.author_github} alt={"author link"}>{node.frontmatter.author}</Link>
-                        <p className={"read-time"}>{node.frontmatter.time} Read</p>
-                    </article>
-                ))
-            }
-            <Link to={"/blogs"} className={"back-link"}> Go Back Up  </Link>
-        </Layout>
+        <HomeLayout pageTitle="Blogs">
+            <div className={"flex flex-wrap justify-center items-center"}>
+                {
+                    data.allMdx.nodes.map(node => (
+                        <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug}/>
+                    ))
+                }
+            </div>
+            <Link to={"/"} className={"back-link"}> Go Back Up  </Link>
+
+        </HomeLayout>
     )
 }
 
@@ -37,9 +31,15 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+           thumbnail {
+            childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
+            }}}
         author
         author_github
         time
+        type
         }
         id
       }

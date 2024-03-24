@@ -33,7 +33,7 @@ module.exports = {
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
-                          maxWidth: 630,
+                          maxWidth: 1200,
                       },
                   },
               ],
@@ -48,13 +48,15 @@ module.exports = {
           resolve: `gatsby-transformer-remark`,
           options: {
               plugins: [
+
+                  `gatsby-remark-color-highlight`,
                   `gatsby-remark-autolink-headers`,
                     `gatsby-remark-prismjs`,
 
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
-                          maxWidth: 800,
+                          maxWidth: 1200,
                       },
                   },
                   {
