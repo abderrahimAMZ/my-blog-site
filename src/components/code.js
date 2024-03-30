@@ -38,9 +38,9 @@ const Code = props => {
     );
 
     return (
+        <div className={"dark:bg-dark-code-bg bg-light-code-bg rounded-md"}>
         <div
             style={{
-                background: "#011627",
                 borderRadius: "0.5rem",
                 marginTop: "2rem",
                 marginBottom: "2rem",
@@ -82,7 +82,6 @@ const Code = props => {
                         marginRight: "1.5rem",
                         marginTop: "0.5rem",
                         padding: "8px 12px",
-                        background: "#00f5c426",
                         border: "none",
                         borderRadius: "8px",
                         cursor: "pointer",
@@ -98,7 +97,6 @@ const Code = props => {
             <div
                 style={{
                     overflow: "auto",
-                    background: "#011627",
                     borderRadius: "0.5rem",
                     paddingBottom: "1rem",
 
@@ -137,6 +135,7 @@ const Code = props => {
                     )}
                 </Highlight>
             </div>
+        </div>
         </div>
     );
 };

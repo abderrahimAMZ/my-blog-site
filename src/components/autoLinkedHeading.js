@@ -18,13 +18,14 @@ const AutoLinkedHeading = ( {children, ...props }) =>  {
             {slugger => {
                 const slug = slugger.slug(children)
                 return (
+                    <div id={slug}>
                     <div className={hover ? "" : "hidden"}>
                     <a
-                        id={slug}
                         href={`#${slug}`}
                     >
-                        <LinkIcon size="16" />
+                        <LinkIcon size="20" />
                     </a>
+                    </div>
                     </div>
                 )
             }}

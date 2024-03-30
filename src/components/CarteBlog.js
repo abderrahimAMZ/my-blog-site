@@ -6,7 +6,7 @@ import {useState} from "react";
 import {darkMode} from "../../tailwind.config";
 
 
-const CarteBlog = ({title, fluid, author, date, time, author_github, type, slug}) => {
+const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}) => {
     const [state, setState] = useState({
         raised:false,
         shadow:1,
@@ -14,10 +14,7 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, type, slug}
     });
     return (
             <div className={"m-5  md:w-5/12 w-full"}>
-                {
-            type === "blog" ?
-
-            <Link to={`/blogs/${slug}`}>
+            <Link to={`${path}/${slug}`}>
                 <Card style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column' , border: state.border  ? "2px solid yellow" : "none"}}
                       onMouseOver={() => setState({raised: true, shadow: 6, border: true})}
                       onMouseOut={() => setState({raised: false, shadow: 1 , border: false})}
@@ -36,26 +33,6 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, type, slug}
                 </Card>
 
             </Link>
-            : type === 'serie' ?
-            <Link to={`/series/${slug}`}>
-                <Card style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column' , border: state.border ? "2px solid yellow" : "none"}}
-                      onMouseOver={() => setState({raised: true, shadow: 6, border: true})}
-                      onMouseOut={() => setState({raised: false, shadow: 1 , border: false})}
-                      raised={state.raised} zDepth={state.shadow}>
-                    <Img fluid={fluid} alt={title}/>
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {title}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            <p className={"date"}>Posted: {date}</p>
-                            Author : <Link to={author_github} alt={"author link"}>{author}</Link>
-                            <p className={"read-time"}>{time} Read</p>
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Link> : null
-                }
                 </div>
                 )
 

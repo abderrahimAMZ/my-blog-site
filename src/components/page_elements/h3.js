@@ -5,7 +5,8 @@ import { AutoLink} from "./heading-link"
 export const StyledH3 = styled.h3`
   font-size: ${({ theme }) => theme.fontSize['2xl']};
   font-family: ${({ theme }) => theme.font.sans};
-  margin-top: ${({ theme }) => theme.spacing[4]};
+  margin-top: ${({ theme }) => theme.spacing[8]};
+  margin-bottom: ${({ theme }) => theme.spacing[6]};
   line-height: ${({ theme }) => theme.lineHeight.none};
 `
 

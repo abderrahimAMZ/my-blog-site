@@ -22,11 +22,9 @@ Ever wondered How C code compiles and runs 🤔 ?
 
 In this blog, we will take a look at the C compilation process details. We will start by explaining the different steps of the compilation process, then we will explain the different types of errors that can occur during the compilation process, and finally, we will explain the different types of files that are generated during the compilation process.
 
-
+<p className="mt-10"></p>
 !["picture explaining the c compilation process"](../images/c-compilation-process/c-compilation-process-global.png)
-
-
-<p></p>
+<p className="mt-10"></p>
 
 as you see in the picture above, the C compilation process is divided into 5 main steps:
 

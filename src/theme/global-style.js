@@ -106,18 +106,6 @@ export const GlobalStyle = createGlobalStyle`
       font-family: ${({ theme }) => theme.font.sans};
   }
   
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    font-family: ${({ theme }) => theme.font.sans};
-    font-size: ${({ theme }) => theme.fontSize.lg};  
-  }
-  ol {
-      list-style-type: decimal;
-      margin-left: 20px;
-      font-family: ${({ theme }) => theme.font.sans};
-      font-size: ${({ theme }) => theme.fontSize.lg};
-  }
 
 
   .my-footer {
@@ -134,7 +122,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .dark {
       background-color: var(--clr-bg-dark);
-      color: var(--clr-text-dark);
+      color: #C1C2C6;
   }
 
 
@@ -143,7 +131,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .dark {
-      background-color: #282c34;
+      background-color: #1B1B1D;
   }
 
 
@@ -166,15 +154,6 @@ export const GlobalStyle = createGlobalStyle`
       margin-left : 10px;
       
   }
-  
-  .gatsby-resp-image-image {
-      margin : 8px !important;
-      width : 100% !important;
-      height : 99% !important ;
-  }
-  .gatsby-resp-image-image {
-      margin-bottom: 2rem;
-  }
   .page-title {
       color: rebeccapurple;
       font-size : 46px;
@@ -185,7 +164,6 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', sans-serif;
   }
   .main {
-      margin-left: 6px;
+      margin-left: 15px;
       margin-right: 6px;
-  }
-`
+  }`

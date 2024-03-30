@@ -3,7 +3,7 @@ import {StaticImage} from "gatsby-plugin-image";
 
 export default function Footer() {
     return (
-        <footer className="bg-white dark:bg-gray-900 mt-20 ">
+        <footer className="bg-white dark:bg-dark-nav mt-20 ">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 pt-20">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">

@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://www.code4coding.tech`,
   },
   plugins: [
+      "gatsby-plugin-anchor-links",
       "gatsby-plugin-image",
       "gatsby-plugin-sharp",
       {

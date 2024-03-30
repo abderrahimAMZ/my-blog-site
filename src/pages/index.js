@@ -19,10 +19,14 @@ const IndexPage = ({data}) => {
     return (
         <main>
             <HomeLayout pageTitle="Home page">
+                <div className={"pt-4 pb-4 text-2xl"}>
+                    Code4coding is a blog where you can find articles, tutorials and practice programming for the effective life. Code4coding is aiming to show the importance of programming as a skill of itself and what power it can unlock in the digital world!
+
+                </div>
                 <div className={"flex flex-wrap justify-center items-center"}>
                 {
                     data.allMdx.nodes.map(node => (
-                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug}/>
+                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/series"} slug={node.frontmatter.slug}/>
                     ))
                 }
                 </div>

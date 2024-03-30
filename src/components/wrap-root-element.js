@@ -4,7 +4,7 @@ import Code from "./code";
 import ModeProvider from "./ModeProvider";
 import {theme, GlobalStyle} from "../theme/global-style";
 import {ThemeProvider} from "styled-components";
-import {H1, H2,H3, P, Highlight} from "./page_elements";
+import {H1, H2, H3, P, Highlight, Ol, Ul} from "./page_elements";
 import AutoLinkedHeading from "./autoLinkedHeading";
 import {CssBaseline} from "@mui/material";
 
@@ -19,7 +19,11 @@ const components = {
     h2: props => <H2><AutoLinkedHeading  {...props} /></H2>,
     h3: props => <H3><AutoLinkedHeading  {...props} /></H3>,
     p: props => <P {...props} />,
-    code: props => <span className={"color-highlight"} {...props} />,
+    code: props => <span className={" bg-light-highlight-bg text-light-highlight-fg  dark:bg-dark-highlight-bg dark:text-dark-color"} {...props} />,
+    ol: props => <Ol {...props} />,
+    ul: props => <Ul {...props} />,
+    img: props => <div onClick={()=> {}}><img {...props} /></div>
+
 };
 
 export const wrapRootElement = ({ element }) => {

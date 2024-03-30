@@ -45,7 +45,7 @@ const Layout = ({pageTitle,children}) => {
             <div className={WiderContainer}>
                 <header className={siteTitle}>
                 </header>
-                <main className={"mb-52 md:ml-6 md:mr-6 sm:ml-4 sm:mr-4 main"}>
+                <main className={"mb-52  main"}>
                     <H1>
                         <h1 className={heading}>
                             {pageTitle}

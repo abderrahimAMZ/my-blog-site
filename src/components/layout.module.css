@@ -9,6 +9,7 @@
 
 }
 
+
 .heading {
     color : rebeccapurple;
 }
@@ -26,6 +27,7 @@
     color : black;
 }
 
-.main {
-    margin-left : 6px;
+img {
+    height: 100% !important;
+    width: 100% !important;
 }

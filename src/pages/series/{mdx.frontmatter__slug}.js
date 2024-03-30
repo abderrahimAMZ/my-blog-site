@@ -4,7 +4,7 @@ import Seo from '../../components/seo'
 import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
 import {StaticImage} from "gatsby-plugin-image";
-
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 const BlogPost = ({ data, children }) => {
     const  tableOfContents = data.mdx.tableOfContents;
     return (
@@ -26,10 +26,8 @@ const BlogPost = ({ data, children }) => {
                             <ul>
                                 {
                                     tableOfContents.items.map(i => (
-                                        <li className={"mt-2 list-none px-2 pl-6"} key={i.url}>
-                                            <a className={" block hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded table-of-content"} href={i.url} key={i.url}>
-                                                {i.title}
-                                            </a>
+                                        <li className={"mt-2 list-none px-2 pl-6 font-sans text-lg"} key={i.url}>
+                                            <AnchorLink className={" block hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded table-of-content"} to={i.url} key={i.url}> {i.title} </AnchorLink>
                                         </li>
                                     ))
                                 }
