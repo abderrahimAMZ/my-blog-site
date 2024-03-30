@@ -35,6 +35,9 @@ module.exports = {
                       resolve: `gatsby-remark-images`,
                       options: {
                           maxWidth: 1200,
+                          marginBottom: 4,
+                          marginTop: 4,
+                          linkImagesToOriginal: false,
                       },
                   },
               ],
@@ -43,7 +46,6 @@ module.exports = {
       },
       `gatsby-remark-copy-linked-files`,
       `gatsby-remark-smartypants`,
-      "gatsby-remark-images",
       "gatsby-plugin-postcss",
       {
           resolve: `gatsby-transformer-remark`,
@@ -58,7 +60,20 @@ module.exports = {
                       resolve: `gatsby-remark-images`,
                       options: {
                           maxWidth: 1200,
-                      },
+                          marginBottom: 4,
+                          marginTop: 4,
+                          linkImagesToOriginal: false,
+                      }
+
+                  },
+                  {
+                      resolve:`gatsby-remark-images-zoom`,
+                      options:{
+                          margin: 50,
+                            background: "rgba(0,0,0,0.8)",
+
+                      }
+
                   },
                   {
                       resolve: `gatsby-remark-table-of-contents`,

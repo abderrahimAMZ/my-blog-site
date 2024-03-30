@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import {StaticImage} from "gatsby-plugin-image";
 import {H2} from "../components/page_elements";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import {Card, CardActions, CardContent, CardMedia, Button, Typography, Grid} from "@mui/material";
 import HomeLayout from "../components/homeLayout";
 import {useState} from "react";
@@ -26,7 +26,7 @@ const IndexPage = ({data}) => {
                 <div className={"flex flex-wrap justify-center items-center"}>
                 {
                     data.allMdx.nodes.map(node => (
-                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/series"} slug={node.frontmatter.slug}/>
+                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/series"} slug={node.frontmatter.slug}/>
                     ))
                 }
                 </div>
@@ -34,33 +34,30 @@ const IndexPage = ({data}) => {
 
             </HomeLayout>
         </main>
-    )
+    );
 }
 
-export const query = graphql`
-  query {
-    allMdx(sort: { frontmatter: { date: DESC }}) {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          slug
-           author
-           thumbnail {
-            childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }}}
-           author_github
-           time
-           type
-            
+export const query = graphql`{
+  allMdx(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      frontmatter {
+        date(formatString: "MMMM D, YYYY")
+        title
+        slug
+        author
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
-        id
+        author_github
+        time
+        type
       }
+      id
     }
   }
-`
+}`
 // You'll learn about this in the next task, just copy it for now
 export const Head = () => {
 

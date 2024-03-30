@@ -16,6 +16,7 @@ import Footer from "./footer";
 import {StaticImage} from "gatsby-plugin-image";
 import {useContext} from "react";
 import {H1} from "./page_elements";
+import CoolBear from "./coolBear";
 const Layout = ({pageTitle,children}) => {
 
     /*
@@ -45,7 +46,7 @@ const Layout = ({pageTitle,children}) => {
             <div className={WiderContainer}>
                 <header className={siteTitle}>
                 </header>
-                <main className={"mb-52  main"}>
+                <main className={"mb-52 pt-20 main"}>
                     <H1>
                         <h1 className={heading}>
                             {pageTitle}

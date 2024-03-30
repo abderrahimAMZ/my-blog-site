@@ -16,6 +16,7 @@ import Footer from "./footer";
 import {StaticImage} from "gatsby-plugin-image";
 import {useContext} from "react";
 import {H1} from "./page_elements";
+import CoolBear from "./coolBear";
 const Layout = ({pageTitle,children}) => {
 
     /*

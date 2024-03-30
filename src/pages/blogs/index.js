@@ -19,7 +19,7 @@ const BlogPage = ({ data }) => {
                 {
                     data.allMdx.nodes.map(node => (
                         <CarteBlog title={node.frontmatter.title}
-                                   fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date}
+                                   fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date}
                                    author={node.frontmatter.author} time={node.frontmatter.time}
                                    author_github={node.frontmatter.author_github} type={node.frontmatter.type}
                                    slug={node.frontmatter.slug} path={"/blogs"}/>
@@ -29,32 +29,33 @@ const BlogPage = ({ data }) => {
             <Link to={"/"} className={"back-link"}> Go Back Up </Link>
 
         </HomeLayout>
-    )
+    );
 }
 
-export const query = graphql`
-  query {
-    allMdx(sort: { frontmatter: { date: DESC }}, filter: {frontmatter: {type: {eq : "blog"}}}) {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          slug
-           thumbnail {
-            childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }}}
+export const query = graphql`{
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {type: {eq: "blog"}}}
+  ) {
+    nodes {
+      frontmatter {
+        date(formatString: "MMMM D, YYYY")
+        title
+        slug
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
         author
         author_github
         time
         type
-        }
-        id
       }
+      id
     }
   }
-`
+}`
 
 export const Head = () => <Seo title="My Blog Posts" />
 

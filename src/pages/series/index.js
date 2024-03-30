@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
             <div className={"flex flex-wrap justify-center items-center"}>
                 {
                     data.allMdx.nodes.map(node => (
-                        <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug} path={"/series"}/>
+                        <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug} path={"/series"}/>
                     ))
                 }
             </div>
@@ -31,33 +31,34 @@ const BlogPage = ({ data }) => {
 
 
         </HomeLayout>
-    )
+    );
 }
 
-export const query = graphql`
-  query {
-    allMdx(sort: { frontmatter: { date: DESC }}, filter : {frontmatter : {type : {eq : "serie"}}}) {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          slug
-          type
-           thumbnail {
-            childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }}}
-           author
-           author_github
-           time
-           type
+export const query = graphql`{
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {type: {eq: "serie"}}}
+  ) {
+    nodes {
+      frontmatter {
+        date(formatString: "MMMM D, YYYY")
+        title
+        slug
+        type
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
-        id
+        author
+        author_github
+        time
+        type
       }
+      id
     }
   }
-`
+}`
 
 export const Head = () => <Seo title="My Blog Posts" />
 
