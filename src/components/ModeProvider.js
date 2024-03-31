@@ -3,7 +3,7 @@ import React,{useState} from "react";
 
 export const ModeContext = React.createContext([true, () => {} ]);
 export const ModeProvider = ({children}) => {
-    const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true' || false);
+    const [darkMode, setDarkMode] = useState(typeof window !== 'undefined' && window.localStorage.getItem('darkMode') === 'true' || false);
 
     function toggleDarkMode() {
         localStorage.setItem('darkMode', !darkMode);
