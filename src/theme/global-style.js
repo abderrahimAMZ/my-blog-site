@@ -166,4 +166,13 @@ export const GlobalStyle = createGlobalStyle`
   .main {
       margin-left: 15px;
       margin-right: 6px;
-  }`
+  }
+
+  body {
+      scroll-padding-top: 70px !important; /* height of your navbar */
+  }
+  Img {
+      height: 100px;
+      width:100px;
+  }
+`

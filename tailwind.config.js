@@ -22,6 +22,14 @@ module.exports = {
         "table-content-color": "#222327",
         "dark-code-bg": "#282830",
         "light-code-bg": "#011627",
+        "quote-dark-bg": "#292A30",
+        "quote-light-bg": "#F9FAFB",
+        "quote-sidebar-bg": "#CCCBFF",
+        "coolbear-bg": "#26241C",
+        "coolbear-bg-border": "#736624",
+        "coolbear-bg-light-border": "#FFEB81",
+        "coolbear-bg-light": "#FEFDF6",
+
 
       }
       },

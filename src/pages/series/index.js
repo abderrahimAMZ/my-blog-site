@@ -47,7 +47,7 @@ export const query = graphql`{
         type
         thumbnail {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(layout: FIXED, width: 200, height: 200)
           }
         }
         author

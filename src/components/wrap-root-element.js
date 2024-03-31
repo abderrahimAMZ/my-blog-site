@@ -7,6 +7,7 @@ import {ThemeProvider} from "styled-components";
 import {H1, H2, H3, P, Highlight, Ol, Ul} from "./page_elements";
 import AutoLinkedHeading from "./autoLinkedHeading";
 import {CssBaseline} from "@mui/material";
+import Blockquote from "./Blockquote";
 
 // i need to make H1 and H2 as  links to the heading how to do that?
 //
@@ -22,7 +23,8 @@ const components = {
     code: props => <span className={" bg-light-highlight-bg text-light-highlight-fg  dark:bg-dark-highlight-bg dark:text-dark-color"} {...props} />,
     ol: props => <Ol {...props} />,
     ul: props => <Ul {...props} />,
-    img: props => <div onClick={()=> {}}><img {...props} /></div>
+    img: props => <div onClick={()=> {}}><img {...props} /></div>,
+    blockquote : props => <Blockquote {...props} />
 
 };
 

@@ -29,7 +29,7 @@ export default function Navbar() {
     const [darkMode, toggleDarkMode] = useContext(ModeContext);
 
     return (
-        <Disclosure as="nav" className={darkMode ? "bg-dark-nav fixed top-0 w-full z-50": "bg-gray-100 fixed top-0 w-full z-50"}>
+        <Disclosure as="nav" className={darkMode ? "bg-dark-nav sticky top-0 w-full z-50 mb-20 ": "bg-gray-100 sticky top-0 w-full z-50 mb-20 "}>
             {({ open }) => (
                 <>
 

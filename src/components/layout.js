@@ -53,11 +53,12 @@ const Layout = ({pageTitle,children}) => {
                     </H1>
 
             </header>
-            <main className={"mb-52 font-serif sm:ml-10 sm:mr-10 main"}>
+            <main className={"mb-52 font-serif sm:ml-10 sm:mr-10 main "}>
                     {children}
             </main>
+            </div>
 
-        </div>
+
             <Footer />
         </div>
     )

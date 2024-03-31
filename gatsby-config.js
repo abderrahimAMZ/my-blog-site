@@ -7,7 +7,12 @@ module.exports = {
     siteUrl: `https://www.code4coding.tech`,
   },
   plugins: [
-      "gatsby-plugin-anchor-links",
+      {
+          resolve : "gatsby-plugin-anchor-links",
+          options : {
+              offset: -100,
+          },
+      },
       "gatsby-plugin-image",
       "gatsby-plugin-sharp",
       {
@@ -34,9 +39,7 @@ module.exports = {
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
-                          maxWidth: 1200,
-                          marginBottom: 4,
-                          marginTop: 4,
+                          maxWidth: 650,
                           linkImagesToOriginal: false,
                       },
                   },
@@ -59,9 +62,7 @@ module.exports = {
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
-                          maxWidth: 1200,
-                          marginBottom: 4,
-                          marginTop: 4,
+                          maxWidth: 650,
                           linkImagesToOriginal: false,
                       }
 

@@ -7,6 +7,7 @@ import {StaticImage} from "gatsby-plugin-image";
 
 import Toc from "../../components/Toc";
 import {AnchorLink} from "gatsby-plugin-anchor-links";
+import CoolBear from "../../components/coolBear";
 
 const BlogPost = ({ data, children }) => {
     var tableOfContents = data.mdx.tableOfContents;
@@ -32,7 +33,7 @@ const BlogPost = ({ data, children }) => {
                                 {
                             tableOfContents.items.map(i => (
                             <li className={"mt-2 list-none px-2 pl-6 font-sans text-lg"} key={i.url}>
-                                <AnchorLink className={" block hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded table-of-content"} to={i.url} key={i.url}> {i.title} </AnchorLink>
+                                <AnchorLink className={" block hover:bg-gray-300 dark:hover:bg-gray-700 px-2 py-1 rounded table-of-content"} to={i.url} key={i.url} > {i.title} </AnchorLink>
                             </li>
                        ))
                                 }
@@ -43,6 +44,7 @@ const BlogPost = ({ data, children }) => {
 
                 {children}
                 <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
+                <CoolBear > idk what is going on here haha</CoolBear>
             </Layout>
 
 

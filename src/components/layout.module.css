@@ -2,10 +2,12 @@
     margin : auto;
     max-width:800px;
     font-family: sans-serif;
+    scroll-padding-top : 70px
 }
 .WiderContainer {
     margin : auto;
     max-width: 1200px;
+    scroll-padding-top : 70px
 
 }
 
