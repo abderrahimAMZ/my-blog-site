@@ -3,8 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Welcome to, Code4Coding!`,
-    siteUrl: `https://www.code4coding.tech`,
+    title: `Code4Coding, Where we code for fun!`,
+    siteUrl: `https://code4coding.tech`,
+    description: `Welcome to Code4Coding, where we explore this world and make the hard easy!`,
+    image: `images/icons8-code-64.png`,
+      twitterUsername: `@Abderrahim_AMZ`,
   },
   plugins: [
       {
@@ -70,7 +73,7 @@ module.exports = {
                   {
                       resolve:`gatsby-remark-images-zoom`,
                       options:{
-                          margin: 50,
+                          margin: 200,
                             background: "rgba(0,0,0,0.8)",
 
                       }

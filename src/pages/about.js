@@ -1,7 +1,7 @@
 // Step 1: Import React
 import * as React from 'react'
 import Layout from "../components/layout";
-import Seo from "../components/seo"
+import Seo, {SEO} from "../components/seo"
 import HomeLayout from "../components/homeLayout";
 import {useContext} from "react";
 import {ModeContext} from "../components/ModeProvider";
@@ -22,7 +22,7 @@ const AboutPage = () => {
             </HomeLayout>
     )
 };
-export const Head = () => <Seo title={"About me"} />
+export const Head = () => <SEO title={"About me"} />
 export default AboutPage;
 
 // Step 3: Export your component

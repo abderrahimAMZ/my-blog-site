@@ -1,7 +1,7 @@
 ---
 title: "C Compilation Process Explained"
 date: "2024-02-16"
-slug: "c-compilation-process-part2"
+slug: "c-compilation-process"
 type: "blog"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
@@ -10,17 +10,18 @@ description: "C compilation process explained in details"
 thumbnail: ../images/c-compilation-process/c-compilation-process-global.png
 ---
 
+import CoolBear from '../src/components/CoolBear'
+import CoolBearTip from '../src/components/CoolBearTip'
+import SmartBear from '../src/components/SmartBear'
+
 
 # Introduction
-
-
-> life is hard my friend
 
 
 Ever wondered How C code compiles and runs 🤔 ?
 
 
-In this blog, we will take a look at the C compilation process details. We will start by explaining the different steps of the compilation process, then we will explain the different types of errors that can occur during the compilation process, and finally, we will explain the different types of files that are generated during the compilation process.
+In this blog, we will take a look at the C compilation process in details. We will start by explaining the different steps of the compilation process, then we will explain the different types of errors that can occur during the compilation process, and finally, we will explain the different types of files that are generated during the compilation process.
 
 <p className="mt-10"></p>
 !["picture explaining the c compilation process"](../images/c-compilation-process/c-compilation-process-global.png)
@@ -40,8 +41,7 @@ which we will explain in details in the following sections.
 
 Before you start, make sure you have the following:
 
-- Basic understanding of Linux commands and the Linux operating system.
-- Basic understanding of the C programming language and the compilation process.
+- a linux based operating system. If you don't have one, consider using a vm (virtual box or vmware or a remote machine that runs linux )
 - GCC installed on your system. You can check this by running `gcc --version` in your terminal.
 - Access to a Linux terminal. You can check your Linux kernel version by running `uname -a` in your terminal.
 
@@ -63,7 +63,7 @@ there 4 main steps in the preprocessing phase:
 
 create a **main.c** file and write the following :
 
-```c file=main.c highlights=1,3,4
+```c Highlights=1,3,4
 #include <stdio.h>
 
 #define print_hello() printf("hello world\n")
@@ -83,7 +83,7 @@ int main() {
 
 then run the following command to see the output of the preprocessing phase:
 
-```bash
+```shell
 gcc -E main.c -o main.i
 ```
 
@@ -96,32 +96,47 @@ int main() {
     return 0;
 }
 ```
+<CoolBear>
+you may wonder what is the use of the preprocessing phase, well,
+this will help you to understand the code better and see the code that will be compiled. also, it will help you understand and build macros and conditional compilation directives.
+</CoolBear>
+
 
 # Compilation
 
 the compilation phase is the phase where the **preprocessed** file is converted to an **assembly** file. the **compiler** is responsible for this phase.
 
+there is a popular quote by compiler designers :
+
+> "compile the compiler with the compiler. So it doesn't have problems it has"- unknown
+
+
 the **compiler** is a software component that takes the **preprocessed** file and converts it to an **assembly** file.
 
 to see the output of the compilation phase, run the following command:
 
-```bash
+```shell
 gcc -S main.i -o main.s
 ```
 
-this will generate a **main.s** file that contains the assembly code of the **main.i** file.
+<CoolBear>
+By the way you can set the C standard using -std flag in the compilation command like you did `gcc -S main.i main.s -std=c11` and you can see all c standards in the man page, type `man 7 standards`.
+you can also add debugging symbols to the assembly file using the `-ggdb` this will enable you to use the gnu debugger tool to see what's wrong with your code!
+</CoolBear>
 
+let's conitnue. This will generate a **main.s** file that contains the assembly code of the **main.i** file.
 
 # Assembly
 
-the assembly phase is the phase where the **assembly** file is converted to an **object** file. the **assembler** is responsible for this phase.
+the assembly phase is the phase where the **assembly** file is converted to an **object** file.
 
-the **assembler** is a software component that takes the **assembly** file and converts it to an **object** file.
+the **assembler** who is responsible for this phase, takes the **assembly** file and converts it to a **Relocatable object file** of type **elf**.
+
 
 
 to see the output of the assembly phase, run the following command:
 
-```bash
+```shell
 gcc -c main.s -o main.o
 ```
 
@@ -129,227 +144,44 @@ this will generate a **main.o** file that contains the object code of the **main
 
 this **main.o** file is called a **relocatable** file because it contains the code and data sections of the **main.s** file and it will be merged with other **relocatable** files in the **linking** phase.
 
+cool bear has something to say:
 
-# Linking
+<CoolBear>
+### locatable object file
 
-linking needs a blog on its own, but in this blog, we will give a brief explanation of the **linking** phase.
-
-
-
-```bash
-
-
-```bash
-
-run the following 
-
-
-
-```bash
-gcc --version
-
-```
-
-```bash
-// linux kernel version
-
-uname -a
-
-```
-
-### header files location
-
-```bash
-ls /usr/include
-
-```
-
-### specify c standard
-
-```bash
-
-gcc -S hello.i -std=c11
-
-```
-
-### see standards
-
-```bash
-man 7 standards
-
-```
-
-
-## add debugging symbols
-
-```bash
-
-gcc -C -ggdb hello.s
-
-```
-
-## locatable object file
-
-the output of assembling phase is `program.o` file that contains
+**Relocatable object file** (.o file ) Contains binary code and data in a form that ca nbe combined with other relocatable object files at compile time to create an executable object file. Each .o file is produced from exactly one .c file. Compilers and assemblers generate relocatable object files.
+the output of assembling phase is `main.o` file that contains
 - this data and code sections' file will be merged with other data and code of other files in the linking phase
 - it contains a symbol table
 - name only of library functions using in source file.
+by the way run this to see for yourself `file main.o`
+you will get the following output:
+ `main.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), not stripped`
+file is a command that displays the type of a file.
 
 
-## static library
+</CoolBear>
 
-```bash
 
-ar -t libc.a | grep printf.o
--> outputs all object files has printf.o name.
 
+# Linking
+
+this part is the boss of the compilation process, it's the phase where all the **relocatable** files are merged together to create an **executable** file.
+
+
+
+<CoolBear props="flex-row-reverse">
+**Executable object file** : (a.out file ) Contains binary code and data in a form that can be copied directly into memory and executed. Linkers generate executable object files.
+</CoolBear>
+
+<SmartBear props={"flex-row-reverse"}>
+idk what to say
+</SmartBear>
+
+<CoolBearTip>
+here is a tip
+</CoolBearTip>
+
+```shell
+gcc main.o -o main
 ```
-
-### static vs dynamic linking
-
-```bash
-gcc hello.c -o dynamicexe -lc
-gcc hello.c -o staticexe -lc --static
-// their sizes
-ls -lh dyynaicexe staticexe
-
-
-```
-
-
-### types of object files
-
-
-![[Pasted image 20240101131523.png]]
-![[Pasted image 20240101131551.png]]
-![[Pasted image 20240101131609.png]]
-![[Pasted image 20240101131630.png]]
-![[Pasted image 20240101131836.png]]
-
-```bash
-readelf -h hello.o	
-readelf -S hello.o // names of sections
-```
-
-.text : code
-.data : initialized variables + static variables
-.bss : beter save space ( unintialized variables)
-
-### objdump
-
-
-```bash
-objdump -h hello.o 
-objdump -D hello.o // disassembly of all sections
-objdump -d hello.o // disassembly of main only
-objdump -d -M intel hello.o // intel format
-```
-
-
-## debugging
-
-```bash
-gdb -q dynamicexe // run debugging session
-disassemble main // disassemble main
-set disassembly-flavor intel
-disassemble main // run it again
-break main // breakpoint
-run
-info registers // or info all-registers
-
-gdb c
-q // quit
-
-
-```
-![[Pasted image 20240101132926.png]]
-![[Pasted image 20240101141416.png]]
-
-```bash
-echo $? // what main return
-```
-
-## syscalls numbers
-
-
-```bash
-less /usr/include/toolchainhere(x86_64-linux-gnu)/asm/unistd_64.h
-```
-
-## move from assembly to relocatable file
-
-```bash
-nasm -f elf64 syscall.nasm // > syscall.o
-```
-
-# Linker and libraries
-![[Pasted image 20240101142830.png]]
-
-![[Pasted image 20240101142905.png]]
-
-![[Pasted image 20240101143018.png]]
-![[Pasted image 20240101143100.png]]
-![[Pasted image 20240101143146.png]]
-
-
-## symbol resolution
-
-![[Pasted image 20240101143745.png]]
-
-## symbol table
-
-```bash
-readelf -s main.o
-objdump -t main.o
-nm main.o
-```
-![[Pasted image 20240101153929.png]]
-![[Pasted image 20240101153911.png]]
-![[Pasted image 20240101154549.png]]
-![[Pasted image 20240101154601.png]]
-
-## AR UTILITY
-
-```bash
-ar -x libc.a # get all the functions within static libc
-```
-
-```bash
-gcc -c prog1.c -I ../ # look at header file one step up.
-```
-
-linking to custom library
-
-```bash
-gcc files.o -o outputfile -llibrary -Lpath
-# example
-gcc *.o -o myexe -labderrahimmath -L../
-```
-
-
-
-## shared library .so
-
-```bash
-gcc -c -fPIC *.c
-gcc -shared *.o -o libabderrahimmath.so
-```
-
-
-## list dynamic dependencies
-```bash
-ldd myexe
-```
-
-
-## warning! : shared library need to be loaded to standard location or update environment variable to include your shared library
-
-```bash
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:PATH_TO_YOUR_SHARED_LIBRARY
-```
-
-
-
-
-
-# preprocessin

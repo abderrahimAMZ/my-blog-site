@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
-import Seo from '../../components/seo'
+import Seo, {SEO} from '../../components/seo'
 import {StaticImage} from "gatsby-plugin-image";
 import {H2} from "../../components/page_elements";
 import HomeLayout from "../../components/homeLayout";
@@ -60,6 +60,6 @@ export const query = graphql`{
   }
 }`
 
-export const Head = () => <Seo title="My Blog Posts" />
+export const Head = () => <SEO title="My Series"  description={"Series where you learn about a topic in details"}/>
 
 export default BlogPage

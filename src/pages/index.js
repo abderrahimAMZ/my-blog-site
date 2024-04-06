@@ -1,5 +1,5 @@
 import * as react from "react"
-import Seo from "../components/seo";
+import {SEO} from "../components/seo";
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
@@ -62,7 +62,7 @@ export const query = graphql`{
 export const Head = () => {
 
     return (
-        <Seo title={"Home Page"} />
+        <SEO title={"Home Page"} />
     )
 }
 export default IndexPage

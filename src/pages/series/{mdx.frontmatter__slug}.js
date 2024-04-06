@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
-import Seo from '../../components/seo'
+import Seo, {SEO} from '../../components/seo'
 import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
 import {StaticImage} from "gatsby-plugin-image";
@@ -57,10 +57,11 @@ export const query = graphql`
            time
       }
       tableOfContents
+      excerpt 
     }
   }
 `
 
-export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
+export const Head = ({ data }) => <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt}/>
 
 export default BlogPost

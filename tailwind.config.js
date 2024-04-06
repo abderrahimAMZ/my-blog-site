@@ -29,6 +29,10 @@ module.exports = {
         "coolbear-bg-border": "#736624",
         "coolbear-bg-light-border": "#FFEB81",
         "coolbear-bg-light": "#FEFDF6",
+        "smartbear-bg": "#333333",
+        "smartbear-bg-border": "#5E6067",
+        "smartbear-bg-light-border": "#CCE3F9",
+        "smartbear-bg-light": "#F6F9FF",
 
 
       }
