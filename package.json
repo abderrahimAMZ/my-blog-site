@@ -11,7 +11,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "build:digitalocean": "npm install --force && npm run build"
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
