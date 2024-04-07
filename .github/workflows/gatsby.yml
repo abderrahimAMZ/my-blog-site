@@ -39,9 +39,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: remove old Docker container
         run: docker rm -f gatsby-app-container || true
-      - name: kill process on port 8080
-        run: fuser -k 8080/tcp || true
       - name: Build the Docker image
         run: docker build -t gatsby-app .
+      - name: kill process on port 8080
+        run: fuser -k 8080/tcp || true
       - name: Run the Docker image
         run: docker run -d -p 8080:80 --name gatsby-app-container gatsby-app
