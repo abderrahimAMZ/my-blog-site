@@ -97,6 +97,8 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: remove old Docker container
         run: docker rm -f gatsby-app-container || true
+      - name : print the working dir
+        run: pwd
       - name: Build the Docker image
         run: docker build -t gatsby-app .
       - name: kill process on port 8080
