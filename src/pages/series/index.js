@@ -11,7 +11,7 @@ const BlogPage = ({ data }) => {
     return (
         <HomeLayout pageTitle="Series">
             <div className={"mt-20 mb-20 text-2xl"}>
-                Here you can find all the series. Series are a collection of articles that are related to each other covering a specific topic like system programming or rust programming. We are soon to release a series on system programming and many more. Stay tuned!
+                Here you can find all the series. Series are a collection of blogs that are related to each other covering a specific topic like system programming or rust programming. We are soon to release a series on system programming and many more. Stay tuned!
             </div>
 
             <div className={"flex flex-wrap justify-center items-center"}>

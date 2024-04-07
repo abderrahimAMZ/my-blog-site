@@ -12,8 +12,7 @@ const BlogPage = ({ data }) => {
         <HomeLayout pageTitle="Blogs">
 
             <div className={"mt-4 mb-4 text-2xl"}>
-                Here you can find Articles. Articles are a short piece of writing on a particular subject. most of the time a 15 minutes read.
-
+                here you can find blogs, most of the them are a 15 minutes read.
             </div>
             <div className={"flex flex-wrap justify-center items-center"}>
                 {

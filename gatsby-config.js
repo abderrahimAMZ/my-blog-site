@@ -71,6 +71,11 @@ module.exports = {
 
                   },
                   {
+                      resolve:`gatsby-remark-images-medium-zoom`,
+                      options:{}
+
+                  },
+                  {
                       resolve: `gatsby-remark-table-of-contents`,
                       options: {
                           exclude: "Table of Contents",
