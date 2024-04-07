@@ -71,15 +71,6 @@ module.exports = {
 
                   },
                   {
-                      resolve:`gatsby-remark-images-zoom`,
-                      options:{
-                          margin: 200,
-                            background: "rgba(0,0,0,0.8)",
-
-                      }
-
-                  },
-                  {
                       resolve: `gatsby-remark-table-of-contents`,
                       options: {
                           exclude: "Table of Contents",
