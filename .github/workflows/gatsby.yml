@@ -93,7 +93,7 @@ jobs:
       - name : print the working dir
         run: pwd
       - name: Build the Docker image
-        run: docker build -t gatsby-app  . ~/runner/work/my-blog-site/my-blog-site/Dockerfile
+        run: docker build -t gatsby-app  . --file ~/runner/work/my-blog-site/my-blog-site/Dockerfile
       - name: kill process on port 8080
         run: fuser -k 8080/tcp || true
       - name: Run the Docker image
