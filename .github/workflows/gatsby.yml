@@ -87,13 +87,14 @@ jobs:
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: remove old Docker container
         run: docker rm -f gatsby-app-container || true
       - name : print the working dir
         run: pwd
       - name: Build the Docker image
-        run: docker build -t gatsby-app  . --file /home/runner/work/my-blog-site/my-blog-site/Dockerfile
+        run: docker build -t gatsby-app  . --file Dockerfile
       - name: kill process on port 8080
         run: fuser -k 8080/tcp || true
       - name: Run the Docker image
