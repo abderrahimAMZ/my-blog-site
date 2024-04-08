@@ -85,8 +85,8 @@ jobs:
           path: ./public
       - name : zip artifacts
         run: tar -czvf public.tar.gz public
-      - name : Transfer build to remote machine using SFTP deploy
-        uses: wlixcc/SFTP-Deploy-Action@1.2.1
+      - name : SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           username : 'gatsby'
           server : '142.93.47.112'
