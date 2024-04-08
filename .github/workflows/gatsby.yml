@@ -86,7 +86,7 @@ jobs:
 
   # Deployment job
   deploy:
-    needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: remove old Docker container
         run: docker rm -f gatsby-app-container || true
