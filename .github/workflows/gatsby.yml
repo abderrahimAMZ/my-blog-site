@@ -88,11 +88,11 @@ jobs:
       - name : SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username : 'gatsby'
+          username : 'root'
           server : '142.93.47.112'
           ssh_private_key : ${{ secrets.SSH_KEY }}
-          local_path : './public.tar.gz'
-          remote_path : '/home/gatsby/'
+          local_path : 'public/*'
+          remote_path : '/usr/share/nginx/html'
           args: '-o ConnectTimeout=10'
 
 
@@ -107,13 +107,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  Deploy-to-remote-machine:
-    runs-on: self-hosted
-    needs: build
-    steps:
-      - name : change directory
-        run: cd /home/gatsby
-      - name: Unzip build on remote machine
-        run : tar -xzvf public.tar.gz
-      - name: copy files to nginx directory
-        run: cp -r public/* /usr/share/nginx/html/
