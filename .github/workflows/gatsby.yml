@@ -92,7 +92,7 @@ jobs:
           server : '142.93.47.112'
           ssh_private_key : ${{ secrets.SSH_KEY }}
           local_path : './public.tar.gz'
-          remote_path : '/home/gatsby/actions-runner/_work/my-blog-site/my-blog-site/'
+          remote_path : '/home/gatsby/'
           args: '-o ConnectTimeout=10'
 
 
@@ -111,13 +111,9 @@ jobs:
     runs-on: self-hosted
     needs: build
     steps:
+      - name : change directory
+        run: cd /home/gatsby
       - name: Unzip build on remote machine
         run : tar -xzvf public.tar.gz
-      - name: Build the Docker image
-        run: docker build -t gatsby-app .
-      - name: kill process on port 8080
-        run: fuser -k 8080/tcp || true
-      - name: remove old Docker container
-        run: docker rm -f gatsby-app-container || true
-      - name: Run the Docker image
-        run: docker run -d -p 8080:80 --name gatsby-app-container gatsby-app
+      - name: copy files to nginx directory
+        run: cp -r public/* /usr/share/nginx/html/
