@@ -4,6 +4,6 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
 
-COPY ./public .
+COPY public .
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
