@@ -91,8 +91,8 @@ jobs:
           username : 'gatsby'
           server : '142.93.47.112'
           ssh_private_key : ${{ secrets.SSH_KEY }}
-          local_path : 'public/*'
-          remote_path : '/usr/share/nginx/html'
+          local_path : './public.tar.gz'
+          remote_path : '/home/gatsby/actions-runner/_work/my-blog-site/my-blog-site/'
           args: '-o ConnectTimeout=10'
 
 
@@ -107,3 +107,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  Deploy-to-remote-machine:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Unzip build on remote machine
+        run : tar -xzvf public.tar.gz
+      - name: Build the Docker image
+        run: docker build -t gatsby-app .
+      - name: kill process on port 8080
+        run: fuser -k 8080/tcp || true
+      - name: remove old Docker container
+        run: docker rm -f gatsby-app-container || true
+      - name: Run the Docker image
+        run: docker run -d -p 8080:80 --name gatsby-app-container gatsby-app
