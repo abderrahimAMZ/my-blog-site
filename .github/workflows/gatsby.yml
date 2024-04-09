@@ -90,7 +90,7 @@ jobs:
         with:
           username : 'root'
           server : '142.93.47.112'
-          ssh_private_key : ${{ secrets.SSH_KEY }}
+          ssh_private_key : ${{ secrets.SSH_PRIVATE_KEY }}
           local_path : 'public/*'
           remote_path : '/usr/share/nginx/html'
           args: '-o ConnectTimeout=10'
