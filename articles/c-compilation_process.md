@@ -175,13 +175,16 @@ this part is the boss of the compilation process, it's the phase where all the *
 </CoolBear>
 
 <SmartBear props={"flex-row-reverse"}>
-idk what to say
+why do i need to understand the compilation process?
 </SmartBear>
 
-<CoolBearTip>
-here is a tip
-</CoolBearTip>
+<CoolBear>
+pfff, many reasons, it makes you cooler.
+</CoolBear>
 
+<SmartBear props={"flex-row-reverse"}>
+Hah?
+</SmartBear>
 ```shell
 gcc main.o -o main
 ```
