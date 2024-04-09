@@ -88,9 +88,9 @@ jobs:
       - name : SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username : 'root'
+          username : 'gatsby'
           server : '142.93.47.112'
-          ssh_private_key : ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh_private_key : ${{ secrets.SSH_KEY }}
           local_path : 'public/*'
           remote_path : '/usr/share/nginx/html'
           args: '-o ConnectTimeout=10'
