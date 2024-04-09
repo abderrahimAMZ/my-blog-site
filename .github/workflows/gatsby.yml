@@ -95,6 +95,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Run the Docker image
-        run: docker run -d -p 8080:80 --name gatsby-app-container gatsby-app
