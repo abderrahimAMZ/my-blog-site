@@ -5,7 +5,7 @@ slug: "c-compilation-process"
 type: "blog"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
-time : "30 min"
+time : "10 min"
 description: "C compilation process explained in details"
 thumbnail: ../images/c-compilation-process/c-compilation-process-global.png
 ---
@@ -239,9 +239,6 @@ $ nm main.o
 ### Symbol Table
 U : undefined symbol
 T : text section symbol
-W : weak symbol
-B : bss section symbol
-D : data section symbol
 
 in our program we have 3 symbols:
 - **main** : the main function
@@ -250,9 +247,6 @@ in our program we have 3 symbols:
 - **_GLOBAL_OFFSET_TABLE_** : this is a special symbol that is used in position-independent code (PIC) to access global variables in shared libraries.
 - **U** : means that the symbol is undefined and will be resolved in the linking phase.
 - **T** : means that the symbol is defined in the text section.
-- **W** : means that the symbol is weak.
-- **B** : means that the symbol is defined in the bss section.
-- **D** : means that the symbol is defined in the data section.
 
 </CoolBear>
 
@@ -300,3 +294,17 @@ Congratulations 🎉 ! you made it to the end. let's say what you have learned i
 - the different tools that can be used to view the content of the elf files and the disassembly of the code such as `readelf`, `objdump`.
 - use of `nm` command to view the symbol table of the elf files.
 
+
+
+
+<SmartBear props="flex-row-reverse">
+So, how C code compiles ?
+</SmartBear>
+
+<CoolBear>
+What you need to know for now is that your code rides a roller coaster of different phases before it becomes an executable file. and turning it into a process is another story! don't worry we are covering some of that here!
+</CoolBear>
+
+<SmartBear props="flex-row-reverse">
+Sounds cool!
+</SmartBear>
