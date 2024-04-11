@@ -170,21 +170,136 @@ this part is the boss of the compilation process, it's the phase where all the *
 
 
 
-<CoolBear props="flex-row-reverse">
+<CoolBear>
 **Executable object file** : (a.out file ) Contains binary code and data in a form that can be copied directly into memory and executed. Linkers generate executable object files.
 </CoolBear>
 
-<SmartBear props={"flex-row-reverse"}>
-why do i need to understand the compilation process?
-</SmartBear>
+relocatable files and executable files are both of type **elf**.
 
+let's view the elf file structure:
+<p className="mt-4"></p>
+
+!["elf file strcuture"](../images/c-compilation-process/elf-format.png)
+
+<p className="mt-4"></p>
+
+the elf file contains the following sections:
+
+- **header** : contains the elf file header.
+- **text** : contains the executable code.
+- **data** : contains the initialized data.
+- **bss** : contains the uninitialized data.
+- **symtab** : contains the symbol table.
+- **strtab** : contains the string table.
+- **debug** : contains the debugging information.
+- **line** : contains the line number information.
+- **shstrtab** : contains the section header string table.
+- **init** : contains the initialization code.
+
+## using readelf command
+let's see the type and content in each section of the **main.o** file using the following commands:
+
+```shell
+file main.o
+readelf -h main.o // to see the header
+readelf -S main.o // to see the sections
+```
+
+## using objdump command
+
+```shell
+objdump -h main.o // to see the header
+objdump -D main.o // disassembly of all sections
+objdump -d main.o // disassembly of main only
+objdump -d -M intel hello.o // intel format
+```
+
+**objdump** and **readelf** are tools to help you see the content of the elf files as well as the disassembly of the code in the desired architecture.
+you may get something like this when running the disassembly using the intel format :
+
+![disassembly of the main.o file](../images/c-compilation-process/objdump-command.png)
+
+
+what you need to know for now is that programs you write in C are not standalone programs, they depend on other libraries like libc, libm, etc. and the linking phase is the phase where these libraries are linked to your program.
+to view the **symbol table** of the **main.o** file, run the following command:
+
+```shell
+nm main.o
+ ```
+you will see something like this :
+```shell
+$ nm main.o 
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 T main
+                 U printf
+                 U puts
+
+```
 <CoolBear>
-pfff, many reasons, it makes you cooler.
+### Symbol Table
+U : undefined symbol
+T : text section symbol
+W : weak symbol
+B : bss section symbol
+D : data section symbol
+
+in our program we have 3 symbols:
+- **main** : the main function
+- **printf** : the printf function
+- **puts** : the puts function
+- **_GLOBAL_OFFSET_TABLE_** : this is a special symbol that is used in position-independent code (PIC) to access global variables in shared libraries.
+- **U** : means that the symbol is undefined and will be resolved in the linking phase.
+- **T** : means that the symbol is defined in the text section.
+- **W** : means that the symbol is weak.
+- **B** : means that the symbol is defined in the bss section.
+- **D** : means that the symbol is defined in the data section.
+
 </CoolBear>
 
-<SmartBear props={"flex-row-reverse"}>
-Hah?
-</SmartBear>
+to see the output of the linking phase, run the following command:
+
+
 ```shell
 gcc main.o -o main
 ```
+
+finally, you will get an executable file named  *main** that contains the executable code of the **main.o** file.
+
+let's see the symbol table of the **main** file again:
+
+```shell
+nm main
+```
+
+there are a lot of symbols in the **main** file, but the most important ones are the **main** function and the **printf** and **puts** functions.
+```shell
+0000000000001169 T main
+                 U printf@@GLIBC_2.2.5
+                 U puts@@GLIBC_2.2.5
+```
+
+printf and puts are still undefined because they are loaded from the libc library dynamically at runtime. we will talk about that in a later blog posts.
+but what i want you to retain is that it knows where to find the **main** function in the **main** file. so at run time, the **main** functions will be executed from the libc library.
+
+
+# Execution
+
+the last phase of the compilation process is the execution phase, this is the phase where the **executable** file is executed.
+
+to execute the **main** file, run the following command:
+
+```shell
+./main
+```
+
+Congratulations 🎉 ! you made it to the end. let's say what you have learned in this blog post:
+
+- the stages of the C compilation process which are **preprocessing**, **compilation**, **assembly**, **linking**, and **execution**.
+- the different types of files that are generated during the compilation process.
+- the elf file structure and the different sections of the elf file.
+- the different tools that can be used to view the content of the elf files and the disassembly of the code such as `readelf`, `objdump`.
+- use of `nm` command to view the symbol table of the elf files.
+
+
+## do you have any issues ?
+contact me here [abderrahimAMZ](mailto:abderrahim.amzaourou@gmail.com) for issues with posts or recommandations.

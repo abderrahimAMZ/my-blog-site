@@ -3,7 +3,7 @@ import React from 'react';
 
 const SmartBear = ({props, children}) => {
     return (
-        <div className={`flex flex-row flex-nowrap mt-10 mb-10 ${props} `}>
+        <div className={`flex ${props != null ? props : "flex-row"}  mt-10 mb-10  `}>
             <div className=" h-3/12 w-4/12" title="student bear says:">
                 <svg className={"dark:fill-white max-h-20"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <path
