@@ -294,17 +294,3 @@ Congratulations 🎉 ! you made it to the end. let's say what you have learned i
 - the different tools that can be used to view the content of the elf files and the disassembly of the code such as `readelf`, `objdump`.
 - use of `nm` command to view the symbol table of the elf files.
 
-
-
-
-<SmartBear props="flex-row-reverse">
-So, how C code compiles ?
-</SmartBear>
-
-<CoolBear>
-What you need to know for now is that your code rides a roller coaster of different phases before it becomes an executable file. and turning it into a process is another story! don't worry we are covering some of that here!
-</CoolBear>
-
-<SmartBear props="flex-row-reverse">
-Sounds cool!
-</SmartBear>

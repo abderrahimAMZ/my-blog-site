@@ -139,9 +139,6 @@ export const GlobalStyle = createGlobalStyle`
   .dark h2 a:hover{
       color: #E30B5C;
   }
-  img {
-      margin : 15px;
-  }
   .color-highlight {
       background-color: #718096
   }
@@ -168,11 +165,4 @@ export const GlobalStyle = createGlobalStyle`
       margin-right: 6px;
   }
 
-  body {
-      scroll-padding-top: 70px !important; /* height of your navbar */
-  }
-  Img {
-      height: 100px;
-      width:100px;
-  }
 `

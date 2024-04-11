@@ -75,6 +75,7 @@ module.exports = {
                       options:{
                             background: "#000",
                             zIndex: 1000,
+                            margin: 40,
                       }
 
                   },
