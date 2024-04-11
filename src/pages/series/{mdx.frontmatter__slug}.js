@@ -12,7 +12,7 @@ const BlogPost = ({ data, children }) => {
             <Layout pageTitle={data.mdx.frontmatter.title}>
 
                 <div className={"blog-post"}>
-                    <p>{data.mdx.frontmatter.date}</p>
+                    <p id={"date"}> {data.mdx.frontmatter.date}</p>
                     Author : <Link to={data.mdx.frontmatter.author_github}
                                    alt={"author link"}>{data.mdx.frontmatter.author}</Link>
                     <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
@@ -35,10 +35,9 @@ const BlogPost = ({ data, children }) => {
                         }
                     </div>
                 )}
-                    <p>{data.mdx.frontmatter.type}</p>
                     {children}
 
-                    <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
+                    <AnchorLink to={"#date"} className={"mt-4 mb-4 text-lg dark:bg-smartbear-bg-border bg-gray-700"}> Go back to the title </AnchorLink>
             </Layout>
 
 

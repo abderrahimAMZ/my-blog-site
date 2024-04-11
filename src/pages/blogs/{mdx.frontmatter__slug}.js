@@ -19,7 +19,7 @@ const BlogPost = ({ data, children }) => {
 
                 <div className={"blog-post"}>
 
-                <p>{data.mdx.frontmatter.date}</p>
+                <p id={"#"}>{data.mdx.frontmatter.date}</p>
                 Author : <Link to={data.mdx.frontmatter.author_github} alt={"author link"}>{data.mdx.frontmatter.author}</Link>
                 <p className={"read-time"}>{data.mdx.frontmatter.time} Read</p>
                 </div>
@@ -43,8 +43,7 @@ const BlogPost = ({ data, children }) => {
                 )}
 
                 {children}
-                <Link to={"/"} className={"back-link"}> Go back to the Articles page </Link>
-                <CoolBear > idk what is going on here haha</CoolBear>
+                <AnchorLink to={"#"} className={"mt-4 mb-4 text-lg dark:text-amber-300  text-amber-700"}> Go back to the title </AnchorLink>
             </Layout>
 
 

@@ -1,6 +1,6 @@
 ---
 title: "C Compilation Process Explained"
-date: "2024-02-16"
+date: "2024-04-10"
 slug: "c-compilation-process"
 type: "blog"
 author: "abderrahim amzaourou"
@@ -300,6 +300,3 @@ Congratulations 🎉 ! you made it to the end. let's say what you have learned i
 - the different tools that can be used to view the content of the elf files and the disassembly of the code such as `readelf`, `objdump`.
 - use of `nm` command to view the symbol table of the elf files.
 
-
-## do you have any issues ?
-contact me here [abderrahimAMZ](mailto:abderrahim.amzaourou@gmail.com) for issues with posts or recommandations.
