@@ -240,7 +240,7 @@ $ nm main.o
 U : undefined symbol
 T : text section symbol
 
-in our program we have 3 symbols:
+in our program we have the following symbols:
 - **main** : the main function
 - **printf** : the printf function
 - **puts** : the puts function
