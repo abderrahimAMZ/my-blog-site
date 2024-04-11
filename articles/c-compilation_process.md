@@ -5,7 +5,7 @@ slug: "c-compilation-process"
 type: "blog"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
-time : "10 min"
+time : "30 min"
 description: "C compilation process explained in details"
 thumbnail: ../images/c-compilation-process/c-compilation-process-global.png
 ---
