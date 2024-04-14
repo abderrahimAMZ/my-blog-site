@@ -5,14 +5,14 @@ slug: "c-compilation-process"
 type: "blog"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
-time : "10 min"
+time : "30 min"
 description: "C compilation process explained in details"
 thumbnail: ../images/c-compilation-process/c-compilation-process-global.png
 ---
 
-import CoolBear from '../src/components/CoolBear'
 import CoolBearTip from '../src/components/CoolBearTip'
 import SmartBear from '../src/components/SmartBear'
+import CoolBear from '../src/components/CoolBear'
 
 
 # Introduction
