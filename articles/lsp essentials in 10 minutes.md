@@ -116,7 +116,7 @@ here is an implementation i did in **go** lang. you can find it here [lsp implem
 
 # Bears tea talk
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 There is this lsp i can lunch , let's go! 🚀, let's send `initialize` request to see what this server does`
 
@@ -134,7 +134,7 @@ I'm a language server, i'm version 1.0, and here are my capabilities, let's work
 
 
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 Amazing. Apparently, this server has a lot to offer! the user oppened a file the lsp server can help with, let's send `didOpen` notification to the server.
 
@@ -146,7 +146,7 @@ oh, this is a lot of code here, let's see what's going on here! 🕵️‍♂️
 
 </CoolBear>
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 the user is typing, let's send `textDocument/didChange` notification to the server.
 
@@ -158,7 +158,7 @@ oh, i see you are typing, amazing, i'm keeping up with you! 🏃‍♂️
 
 </CoolBear>
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 the user is asking for auto-completion, let's send `textDocument/completion` request to the server.
 
@@ -170,7 +170,7 @@ sorry, i have no idea of what you want! 🤷‍♂️
 
 </CoolBear>
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 the user is asking for go to definition, let's send `textDocument/definition` request to the server.
 
@@ -182,7 +182,7 @@ i have no idea where i can find this definition! 🤷‍♂️
 
 </CoolBear>
 
-<SmartBear>
+<SmartBear props="flex-row-reverse">
 
 are you really an lsp server? 🤔
 
