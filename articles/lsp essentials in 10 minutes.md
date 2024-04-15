@@ -112,6 +112,10 @@ now, let's see the sequence of events that happen when you open a file in your e
 6. the client sends an **exit** notification to the editor.
 
 
+here is an implementation i did in **go** lang. you can find it here [lsp implementation](https://github.com/abderrahimAMZ/lsp)
+
+# Bears tea talk
+
 <SmartBear>
 
 There is this lsp i can lunch , let's go! 🚀, let's send `initialize` request to see what this server does`
@@ -183,3 +187,10 @@ i have no idea where i can find this definition! 🤷‍♂️
 are you really an lsp server? 🤔
 
 </SmartBear>
+
+
+
+
+
+
+

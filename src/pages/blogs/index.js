@@ -6,6 +6,7 @@ import {StaticImage} from "gatsby-plugin-image";
 import {H2} from "../../components/page_elements";
 import HomeLayout from "../../components/homeLayout";
 import CarteBlog from "../../components/CarteBlog";
+import {Grid} from "@mui/material";
 
 const BlogPage = ({ data }) => {
     return (
@@ -16,13 +17,14 @@ const BlogPage = ({ data }) => {
             </div>
             <div className={"flex flex-wrap justify-center items-center"}>
                 {
-                    data.allMdx.nodes.map(node => (
-                        <CarteBlog title={node.frontmatter.title}
-                                   fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date}
-                                   author={node.frontmatter.author} time={node.frontmatter.time}
-                                   author_github={node.frontmatter.author_github} type={node.frontmatter.type}
-                                   slug={node.frontmatter.slug} path={"/blogs"}/>
-                    ))
+                            data.allMdx.nodes.map(node => (
+                                <CarteBlog title={node.frontmatter.title}
+                                           fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date}
+                                           author={node.frontmatter.author} time={node.frontmatter.time}
+                                           author_github={node.frontmatter.author_github} type={node.frontmatter.type}
+                                           slug={node.frontmatter.slug} path={"/blogs"}/>
+                            ))
+
                 }
             </div>
             <Link to={"/"} className={"back-link"}> Go Back Up </Link>

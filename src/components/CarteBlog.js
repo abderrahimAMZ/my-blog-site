@@ -1,4 +1,4 @@
-import {Card, CardContent, Typography} from "@mui/material";
+import {Card, CardContent, Grid, Typography} from "@mui/material";
 import { GatsbyImage } from "gatsby-plugin-image";
 import {Link} from "gatsby";
 import * as React from "react";
@@ -15,14 +15,32 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
     return (
         <div className={"m-5  md:w-5/12 w-full "}>
         <Link to={`${path}/${slug}`}>
-            <Card sx={{ maxWidth: 450 }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column' , border: state.border  ? "1px solid yellow" : "none"}}
+            <Grid
+                  justifyContent="space-between"
+                  alignItems="center"
+                  align="center"
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={4}
+            >
+            <Grid
+                  justifyContent="space-between"
+                  alignItems="center"
+                  align="center"
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  lg={4}
+            >
+            <Card sx={{ maxWidth: 450}} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column' , border: state.border  ? "1px solid yellow" : "none"}}
                   onMouseOver={() => setState({raised: true, shadow: 6, border: true})}
                   onMouseOut={() => setState({raised: false, shadow: 1 , border: false})}
                   raised={state.raised} zDepth={state.shadow}>
-                <div className={"w-full  m-auto"}>
+                <div className={"w-full  m-auto "}>
                 <GatsbyImage image={fluid} alt={title} />
                 </div>
-                <CardContent>
+                <CardContent >
                     <Typography gutterBottom variant="h5" component="div">
                         {title}
                     </Typography>
@@ -33,6 +51,8 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
                     </Typography>
                 </CardContent>
             </Card>
+            </Grid>
+            </Grid>
 
         </Link>
             </div>
