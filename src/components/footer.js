@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="mb-6 md:mb-0">
                         <a href="https://github.com/abderrahimAMZ" className="flex items-center">
                             <StaticImage src="../../images/icons8-code-64.png" className="h-8 me-3" alt="TeaCode" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Code4Coding</span>
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">codfee.dev</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

@@ -3,9 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Code4Coding, Where we code for fun!`,
-    siteUrl: `https://code4coding.tech`,
-    description: `Welcome to Code4Coding, where we explore this world and make the hard easy!`,
+    title: `codfee.dev, Where we code for fun!`,
+    siteUrl: `https://codfee.dev`,
+    description: `Welcome to codfee.dev, where we explore this world and make the hard easy!`,
     image: `images/icons8-code-64.png`,
       twitterUsername: `@Abderrahim_AMZ`,
   },
@@ -31,9 +31,7 @@ module.exports = {
                   // Setting this parameter is also optional
                   respectDNT: true,
                   // Avoids sending pageview hits from custom paths
-                  exclude: ["/preview/**", "/do-not-track/me/too/"],
                   // Defaults to https://www.googletagmanager.com
-                  origin: "YOUR_SELF_HOSTED_ORIGIN",
                   // Delays processing pageview events on route update (in milliseconds)
                   delayOnRouteUpdate: 0,
               },

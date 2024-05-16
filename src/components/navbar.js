@@ -17,7 +17,7 @@ import {Image} from "react-bootstrap"
 const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
-    { name: 'Series', href: '/series', current: false },
+    { name: 'Productivity', href: '/productivity', current: false },
     { name: 'Blogs', href: '/blogs', current: false },
 ]
 
