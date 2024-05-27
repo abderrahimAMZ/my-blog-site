@@ -4,7 +4,7 @@ import Code from "./code";
 import ModeProvider from "./ModeProvider";
 import {theme, GlobalStyle} from "../theme/global-style";
 import {ThemeProvider} from "styled-components";
-import {H1, H2, H3, P, Highlight, Ol, Ul} from "./page_elements";
+import {H1, H2, H3, P, A, Highlight, Ol, Ul} from "./page_elements";
 import AutoLinkedHeading from "./autoLinkedHeading";
 import {CssBaseline} from "@mui/material";
 import Blockquote from "./Blockquote";
@@ -24,7 +24,8 @@ const components = {
     ol: props => <Ol {...props} />,
     ul: props => <Ul {...props} />,
     img: props => <div onClick={()=> {}}><img {...props} /></div>,
-    blockquote : props => <Blockquote {...props} />
+    blockquote : props => <Blockquote {...props} />,
+    a: props => <a  className={"underline"} {...props} />,
 
 };
 

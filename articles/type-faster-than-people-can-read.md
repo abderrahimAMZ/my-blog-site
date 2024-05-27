@@ -26,7 +26,7 @@ look, put simply, time is money! if you want to trade it in the first place! so,
 
 
 
-# why typing fast is a necessity and not a luxury.
+# why typing fast is a necessity and not a luxury
 
 
 
@@ -55,7 +55,7 @@ because i'm here to go beyond that, i'm here to teach you how to be lighting fas
 
 
 
-# what i'm teaching you next
+# what i am teaching you next
 
 
 - vim motions ( this will enable you to edit your files supper fast! and have full control over your dev environment)
@@ -69,4 +69,4 @@ Stay tuuuuned!
 
 # where to learn!
 
-I can't find for you something better than  [typing club](www.typingclub.com) is the best way to go, it where i learned my self! so stay committed, 10 mins a day is enough of practice, by a month you should be able to score about 40 word/min and after 2 you can pass my score! tell me on my email address that you have beaten me! 💪
+I can't find for you something better than  [typing club](https://www.typingclub.com) is the best way to go, it where i learned my self! so stay committed, 10 mins a day is enough of practice, by a month you should be able to score about 40 word/min and after 2 you can pass my score! tell me on my email address that you have beaten me! 💪
