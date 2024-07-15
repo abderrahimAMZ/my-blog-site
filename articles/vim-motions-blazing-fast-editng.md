@@ -28,6 +28,32 @@ don't be busy to improve!
 vim motions is  the thing that when you learn, you want to use everywhere. it's even included in my favorite note-taking software which is [obsidian](https://obsidian.md/) which might be another subject for another article.
 vim motions will increase your productivity simply because you minimize the travel to your mouse. in addition, what realize actions that you do frequently with the mouse in a fraction of a second.
 
+take this scenario as an example.
+
+```python
+
+# you have a list of items that you get from a website and you want to add "" to each item.
+
+list_of_items_before = [
+    item1,
+    item2,
+    item3,
+    item4,
+    item5
+    ];
+
+list_after = [
+    "item1",
+    "item2",
+    "item3",
+    "item4",
+    "item5"
+];
+
+```
+doing this edit in vim motions using what's known as macros would raughly take 5 seconds whereas doing it with the mouse would take 15 seconds. and this is a simple example. imagine doing this with a 1000 items list. you will save a lot of time.
+what if you have 100 items or 1000. and this is just a simple example of what you can do with vim motions.
+
 # Vim motions Vs Vim editors
 
 don't confuse the two. vim motions are the set of commands that allow you to move around your file, select text, copy, paste, delete, and more. while vim editors are the software that you use to write your code. the most popular one is [neovim](https://neovim.io/).
