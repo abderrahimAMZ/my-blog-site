@@ -1,5 +1,5 @@
 ---
-title: "vim blazing fast editing. learn how to be productive and effecient with your IDE"
+title: "vim motions, blazing fast editing. learn how to be productive and effecient with your IDE"
 date: "2024-07-15"
 slug: "vim-motions-blazing-fast-editng"
 type: "prod"
