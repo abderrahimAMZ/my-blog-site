@@ -12,7 +12,7 @@ thumbnail: ../images/vim_motions.png
 
 
 
-# What is Vim motions?
+# What is Vim motions
 
 ![vim motions image](../images/vim_motions.png)
 
@@ -20,7 +20,7 @@ thumbnail: ../images/vim_motions.png
 as you see in the picture. vim motions are a set of modes. each mode has its own set of commands that allow you to move around your file, select text, copy, paste, delete, and more. it is the way for maximum productivity in your dev environment.
 not only that. vim motions has a more powerful features such macros! you can record your actions and replay them whenever you want. this is a game changer for me. 
 
-# Why Vim motions?
+# Why Vim motions
 
 ![vim motions image](../images/busy_to_improve.png)
 
@@ -32,7 +32,11 @@ take this scenario as an example.
 
 ```python
 
-# you have a list of items that you get from a website and you want to add "" to each item.
+"""
+you have a list of items
+that you get from a website and you want 
+to add "" to each item.
+"""
 
 list_of_items_before = [
     item1,
@@ -68,9 +72,9 @@ don't confuse the two. vim motions are the set of commands that allow you to mov
 
 # Recommended resources
 
-- ben award has an excellent 1-hour minutes YouTube video explaining the basics and beyond of vim motions. check it out here [vim motions explained](https://www.youtube.com/watch?v=IiwGbcd8S7I)
-- the primegean has a playlist teaching vim motions and neovim configuration which is something you may want to play with. check it out here [vim motions and neovim configuration](https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&ab_channel=ThePrimeagen)
-- here one of my favorite channels i watch around vim editor and learning motions by the terminal. check it out here [typcraft](https://www.youtube.com/@typecraft_dev)
+- **ben award** has an excellent 1-hour minutes YouTube video explaining the basics and beyond of vim motions. check it out here [vim motions explained](https://www.youtube.com/watch?v=IiwGbcd8S7I)
+- **the primegean** has a playlist teaching vim motions and neovim configuration which is something you may want to play with. check it out here [vim motions and neovim configuration](https://www.youtube.com/watch?v=X6AR2RMB5tE&list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R&ab_channel=ThePrimeagen)
+- here one of my favorite channels i watch around vim editor and learning motions by **typecraft**. check it out here [typcraft](https://www.youtube.com/@typecraft_dev)
 
 
 
