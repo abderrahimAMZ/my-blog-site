@@ -1,12 +1,12 @@
 ---
-title: "Vim motions: blazing fast editing"
+title: "vim blazing fast editing. learn how to be productive and effecient with your IDE"
 date: "2024-07-15"
 slug: "vim-motions-blazing-fast-editng"
 type: "prod"
 author: "abderrahim amzaourou"
 author_github: "https://github.com/abderrahimAMZ"
 time : "5 min"
-description: "vim motions is the way for maximum productivity in your dev environment. see recommended resources from somebody using it for 2 years!"
+description: "vim motions is the way to go for maximum productivity in your dev environment. learn how to be productive and effecient with your IDE."
 thumbnail: ../images/vim_motions.png
 ---
 
