@@ -22,10 +22,6 @@ const BlogPage = ({ data }) => {
                 }
             </div>
             <div>
-                <div className={"mt-20 mb-20 text-xl"}>
-            <Link to={"/"} className={"back-link"}> Go Back Up  </Link>
-
-                </div>
 
             </div>
 

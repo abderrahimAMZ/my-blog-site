@@ -27,7 +27,6 @@ const BlogPage = ({ data }) => {
 
                 }
             </div>
-            <Link to={"/"} className={"back-link"}> Go Back Up </Link>
 
         </HomeLayout>
     );

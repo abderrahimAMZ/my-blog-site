@@ -37,7 +37,6 @@ const BlogPost = ({ data, children }) => {
                 )}
                     {children}
 
-                    <AnchorLink to={"#date"} className={"mt-4 mb-4 text-lg dark:bg-smartbear-bg-border bg-gray-700"}> Go back to the title </AnchorLink>
             </Layout>
 
 

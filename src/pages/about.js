@@ -13,7 +13,7 @@ const AboutPage = () => {
 
                 <div className={"mb-32  pt-20 pb-32"}>
                 <p className={"about"}>
-                    Hi, my name is abderrahim amzaourou. I'm an embedded software engineering student. I love sharing technologies i think are important for developers to know about. I try to simplify, break down topics into smaller ones so they come in handy. I believe of the compounding effect, if you commit to work just for 30 mins a day. it would have a big impact in the long run. if you wish to contact me, feel free to reach out to me on my email. <a className={`${darkMode ? "text-amber-300" : "text-blue-950"} underline`} href={"mailto:abderrahim.amzaourou@gmail.com"} > abderrahim.amzaourou@gmail.com</a>.
+                    Hi, my name is abderrahim amzaourou. I'm a software engineering student. I'm interested in system programming, web development and UI/UX design. I love sharing technologies i think are important for developers to know about. I try to simplify, break down topics into smaller ones so they come in handy. I believe of the compounding effect, if you commit to work just for 30 mins a day. it would have a big impact in the long run. if you wish to contact me, feel free to reach out to me on my email. <a className={`${darkMode ? "text-amber-300" : "text-blue-950"} underline`} href={"mailto:abderrahim.amzaourou@gmail.com"} > abderrahim.amzaourou@gmail.com</a>.
                 </p>
 
                 </div>

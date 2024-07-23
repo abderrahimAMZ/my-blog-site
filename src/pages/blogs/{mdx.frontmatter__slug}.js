@@ -43,7 +43,6 @@ const BlogPost = ({ data, children }) => {
                 )}
 
                 {children}
-                <AnchorLink to={"#"} className={"mt-4 mb-4 text-lg dark:text-amber-300  text-amber-700"}> Go back to the title </AnchorLink>
             </Layout>
 
 

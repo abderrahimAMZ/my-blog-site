@@ -30,7 +30,6 @@ const IndexPage = ({data}) => {
                     ))
                 }
                 </div>
-                <Link to={"/"} className={"back-link"}> Go Back Up  </Link>
 
             </HomeLayout>
         </main>
