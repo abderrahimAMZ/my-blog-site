@@ -15,7 +15,7 @@ const BlogPage = ({ data }) => {
             <div className={"mt-4 mb-4 text-2xl"}>
                 here, will talk about productivity boosters, such as time management, tools, and tips to improve your productivity.
             </div>
-            <div className={"flex flex-wrap justify-center items-center"}>
+            <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 grid-rows-layout"}>
                 {
                             data.allMdx.nodes.map(node => (
                                 <CarteBlog title={node.frontmatter.title}

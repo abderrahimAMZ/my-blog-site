@@ -15,7 +15,7 @@ const BlogPage = ({ data }) => {
             <div className={"mt-4 mb-4 text-2xl"}>
                 here you can find blogs, most of the them are a 15 minutes read.
             </div>
-            <div className={"flex flex-wrap justify-center items-center"}>
+            <div className={" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg xl:grid-cols-4 gap-2 grid-rows-layout"}>
                 {
                             data.allMdx.nodes.map(node => (
                                 <CarteBlog title={node.frontmatter.title}

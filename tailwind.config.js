@@ -12,8 +12,19 @@ module.exports = {
         sans : ["Roboto", "sans-serif"],
         serif : ["Merriweather", "serif"],
       },
+      gridTemplateRows : {
+        "layout" : "0.5 0.3 0.2",
+        "layout2" : "auto 1fr auto",
+      },
+      gridTemplateColumns : {
+        "two-cols" : "1fr 1fr",
+        "three-cols" : "1fr 1fr 1fr",
+        "four-cols" : "1fr 1fr 1fr 1fr",
+        "five-cols" : "1fr 1fr 1fr 1fr 1fr",
+      },
       colors : {
         "dark-nav" : "#222327",
+        "dark-card" : "#292A30",
         "dark-nav-elements": "#41434E",
         "dark-highlight-bg": "#4E505C",
         "light-highlight-bg": "#fde2e4",

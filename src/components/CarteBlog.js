@@ -13,49 +13,31 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
         border: false
     });
     return (
-        <div className={"m-4 md:w-3/12 w-full "}>
+        <div className={"w-[270px] h-[360px] dark:bg-dark-card mx-5 my-2 bg-gray-100 rounded-md dark:shadow-black dark:shadow-sm shadow-sm shadow-gray-300 transform hover:scale-110"}>
         <Link to={`${path}/${slug}`}>
-            <Grid
-                  justifyContent="space-between"
-                  alignItems="center"
-                  align="center"
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={4}
-            >
-            <Grid
-                  justifyContent="space-between"
-                  alignItems="center"
-                  align="center"
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  lg={4}
-            >
-            <Card sx={{ maxWidth: 300}} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column' , border: state.border  ? "1px solid yellow" : "none"}}
-                  onMouseOver={() => setState({raised: true, shadow: 6, border: true})}
-                  onMouseOut={() => setState({raised: false, shadow: 1 , border: false})}
-                  raised={state.raised} zDepth={state.shadow}>
-                <div className={"w-full  m-auto "}>
-                <GatsbyImage image={fluid} alt={title} />
+            <div className={"grid grid-rows-layout "}>
+                <div>
+
+                    <GatsbyImage image={fluid} alt={title}  as={"div"}
+                                 style={{height: "180px", width: "100%" }}
+                                    imgStyle={{objectFit: "cover"}}
+                />
+
                 </div>
-                <CardContent >
-                    <Typography gutterBottom variant="h5" component="div">
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        <p className={"date"}>Posted: {date}</p>
-                        Author : <Link to={author_github} alt={"author link"}>{author}</Link>
-                        <p className={"read-time"}>{time} Read</p>
-                    </Typography>
-                </CardContent>
-            </Card>
-            </Grid>
-            </Grid>
+
+                <div className={"text-md font-bold mx-2 my-1 pb-auto"}>
+                    {title}
+                </div>
+                <div className={"text-sm  mx-2 my-1 pt-auto"}>
+                    <p className={"date"}>Posted: {date}</p>
+                    Author : <Link to={author_github} alt={"author link"}>{author}</Link>
+                    <p className={"read-time"}>{time} Read</p>
+                </div>
+            </div>
+
 
         </Link>
-            </div>
+        </div>
     );
 
 }

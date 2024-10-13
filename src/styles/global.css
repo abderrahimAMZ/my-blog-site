@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 
+
+@layer components {
+    .img {
+        @apply h-[180px] w-[300px];
+    }
+}

@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
                     codfee.dev is a blog where you can find articles, tutorials and practice programming for the effective life. codfee.dev is aiming to show the importance of programming as a skill of itself and what power it can unlock in the digital world!
 
                 </div>
-                <div className={"flex flex-wrap justify-center items-center"}>
+                <div className={"grid sm:grid-cols-two-cols md:grid-cols-three-cols xl:grid-cols-four-cols gap-0  grid-rows-layout  md:max-w-[950px] md:max-auto "}>
                 {
                     data.allMdx.nodes.map(node => (
                     <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/series"} slug={node.frontmatter.slug}/>
