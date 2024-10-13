@@ -13,8 +13,10 @@ module.exports = {
         serif : ["Merriweather", "serif"],
       },
       gridTemplateRows : {
-        "layout" : "0.5 0.3 0.2",
+        "layout" : "0.5 0.4 0.1",
         "layout2" : "auto 1fr auto",
+        "layout3" : "1fr 0.7 0.3",
+        "three" : "1fr 1fr 1fr",
       },
       gridTemplateColumns : {
         "two-cols" : "1fr 1fr",

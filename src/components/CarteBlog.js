@@ -13,9 +13,7 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
         border: false
     });
     return (
-        <div className={"w-[270px] h-[360px] dark:bg-dark-card mx-5 my-2 bg-gray-100 rounded-md dark:shadow-black dark:shadow-sm shadow-sm shadow-gray-300 transform hover:scale-110"}>
-        <Link to={`${path}/${slug}`}>
-            <div className={"grid grid-rows-layout "}>
+        <Link to={`${path}/${slug}`} className={"w-[270px]  dark:bg-dark-card mx-5 my-2 bg-gray-100 rounded-md dark:shadow-black dark:shadow-sm shadow-sm shadow-gray-300 transform hover:scale-110 grid grid-rows-subgrid gap-1 "}>
                 <div>
 
                     <GatsbyImage image={fluid} alt={title}  as={"div"}
@@ -25,19 +23,15 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
 
                 </div>
 
-                <div className={"text-md font-bold mx-2 my-1 pb-auto"}>
+                <div className={"text-md font-bold mx-2 my-1 pb-auto flex align-top"}>
                     {title}
                 </div>
-                <div className={"text-sm  mx-2 my-1 pt-auto"}>
+                <div className={"text-sm  mx-2 my-1  pb-0 pt-auto "}>
                     <p className={"date"}>Posted: {date}</p>
                     Author : <Link to={author_github} alt={"author link"}>{author}</Link>
                     <p className={"read-time"}>{time} Read</p>
                 </div>
-            </div>
-
-
         </Link>
-        </div>
     );
 
 }

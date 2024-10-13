@@ -26,7 +26,7 @@ const IndexPage = ({data}) => {
                 <div className={"grid sm:grid-cols-two-cols md:grid-cols-three-cols xl:grid-cols-four-cols gap-0  grid-rows-layout  md:max-w-[950px] md:max-auto "}>
                 {
                     data.allMdx.nodes.map(node => (
-                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/series"} slug={node.frontmatter.slug}/>
+                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/productivity"} slug={node.frontmatter.slug}/>
                     ))
                 }
                 </div>

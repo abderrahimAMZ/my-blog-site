@@ -15,7 +15,7 @@ import {Image} from "react-bootstrap"
 
 
 const navigation = [
-    { name: 'Home', href: '/', current: true },
+    { name: 'Home', href: '/', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Productivity', href: '/productivity', current: false },
     { name: 'Blogs', href: '/blogs', current: false },
@@ -28,6 +28,20 @@ function classNames(...classes) {
 export default function Navbar() {
     const [darkMode, toggleDarkMode] = useContext(ModeContext);
 
+    navigation.forEach(item=> item.current = false);
+    navigation.forEach(item=> {
+            if (window.location.pathname.includes(item.href)) {
+                item.current = true;
+                if (window.location.pathname !== "/" && item.name !== "Home") {
+                    item.current = false;
+                }
+            }
+            else {
+                item.current = false;
+            };
+        }
+    );
+
     return (
         <Disclosure as="nav" className={darkMode ? "bg-dark-nav sticky top-0 w-full z-50 mb-20 ": "bg-gray-100 sticky top-0 w-full z-50 mb-20 "}>
             {({ open }) => (
@@ -37,7 +51,7 @@ export default function Navbar() {
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="absolute -inset-0.5" />
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
@@ -60,12 +74,19 @@ export default function Navbar() {
                                         {navigation.map((item) => (
                                             <Link
                                                 onClick={() => {
-                                                    navigation.map((item)=> {item.current = false;})
-                                                    item.current = true;
+                                                    navigation.forEach(item=> {
+                                                            if (window.location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && window.location.pathname.length ===1) {
+                                                                item.current = true;
+                                                            }
+                                                            else {
+                                                                item.current = false;
+                                                            };
+                                                        }
+                                                    );
                                                 }}
                                                 to={item.href}
                                                 className={classNames(
-                                                    item.current ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-gray-500'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
+                                                    (window.location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && window.location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -78,14 +99,14 @@ export default function Navbar() {
                             </div>
                             <div className="flex flex-col justify-center ml-3" onClick={toggleDarkMode}>
                                 <label className="relative cursor-pointer p-2" htmlFor="light-switch">
-                                    <svg className="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <svg className="dark:hidden fill-black" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                                         <path
-                                            className="fill-slate-300"
+                                            className="fill-slate-600"
                                             d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
                                         />
-                                        <path className="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                                        <path className="fill-slate-600" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
                                     </svg>
-                                    <svg className="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <svg className="hidden dark:block fill-black" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                                         <path className="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
                                         <path
                                             className="fill-slate-500"

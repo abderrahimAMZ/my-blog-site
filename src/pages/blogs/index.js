@@ -10,7 +10,7 @@ import {Grid} from "@mui/material";
 
 const BlogPage = ({ data }) => {
     return (
-        <HomeLayout pageTitle="Blogs">
+        <HomeLayout pageTitle="Blogs" >
 
             <div className={"mt-4 mb-4 text-2xl"}>
                 here you can find blogs, most of the them are a 15 minutes read.
