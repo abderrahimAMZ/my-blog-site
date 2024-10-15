@@ -13,7 +13,7 @@ const CarteBlog = ({title, fluid, author, date, time, author_github, slug, path}
         border: false
     });
     return (
-        <Link to={`${path}/${slug}`} className={"w-[270px]  dark:bg-dark-card mx-5 my-2 bg-gray-100 rounded-md dark:shadow-black dark:shadow-sm shadow-sm shadow-gray-300 transform hover:scale-110 grid grid-rows-subgrid gap-1 "}>
+        <Link to={`${path}/${slug}`} className={"w-[270px]  dark:bg-dark-card mx-5 my-2 bg-gray-100 rounded-md dark:shadow-black dark:shadow-sm shadow-sm shadow-gray-300 transform hover:scale-110 grid grid-rows-subgrid  "}>
                 <div>
 
                     <GatsbyImage image={fluid} alt={title}  as={"div"}

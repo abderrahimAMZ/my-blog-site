@@ -10,6 +10,7 @@ import {Card, CardActions, CardContent, CardMedia, Button, Typography, Grid} fro
 import HomeLayout from "../components/homeLayout";
 import {useState} from "react";
 import CarteBlog from "../components/CarteBlog";
+import blogImg from "../../images/layout-images/blogs.png"
 
 const IndexPage = ({ location, data}) => {
     const [state, setState] = useState({
@@ -17,18 +18,27 @@ const IndexPage = ({ location, data}) => {
         shadow:1,
     })
     return (
+
         <main>
-            <HomeLayout pageTitle="Home page" location={location}>
+            <HomeLayout pageTitle="Home page" location={location} ImgSrc={"../../images/layout-images/blogs.png"} ImgAlt={"blogs"}>
                 <div className={"pt-4 pb-4 text-2xl"}>
-                    codfee.dev is a blog where you can find articles, tutorials and practice programming for the effective life. codfee.dev is aiming to show the importance of programming as a skill of itself and what power it can unlock in the digital world!
+                    codfee.dev is a blog where you can find articles, tutorials and practice programming for the
+                    effective life. codfee.dev is aiming to show the importance of programming as a skill of itself and
+                    what power it can unlock in the digital world!
 
                 </div>
-                <div className={"grid sm:grid-cols-two-cols md:grid-cols-three-cols xl:grid-cols-four-cols gap-0  grid-rows-layout  md:max-w-[950px] md:max-auto "}>
-                {
-                    data.allMdx.nodes.map(node => (
-                    <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} path={node.frontmatter.type === "blog" ? "/blogs" : "/productivity"} slug={node.frontmatter.slug}/>
-                    ))
-                }
+                <div
+                    className={"grid sm:grid-cols-two-cols md:grid-cols-three-cols xl:grid-cols-four-cols gap-0  grid-rows-layout3  md:max-w-[950px] md:max-auto "}>
+                    {
+                        data.allMdx.nodes.map(node => (
+                            <CarteBlog title={node.frontmatter.title}
+                                       fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+                                       date={node.frontmatter.date} author={node.frontmatter.author}
+                                       time={node.frontmatter.time} author_github={node.frontmatter.author_github}
+                                       path={node.frontmatter.type === "blog" ? "/blogs" : "/productivity"}
+                                       slug={node.frontmatter.slug}/>
+                        ))
+                    }
                 </div>
 
             </HomeLayout>

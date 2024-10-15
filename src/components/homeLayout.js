@@ -13,11 +13,12 @@ import { WiderContainer,
 
 import Navbar from "./navbar";
 import Footer from "./footer";
-import {StaticImage} from "gatsby-plugin-image";
+import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
 import {useContext} from "react";
 import {H1} from "./page_elements";
 import CoolBear from "./CoolBear";
-const Layout = ({pageTitle, location,children}) => {
+import {Image} from "react-bootstrap";
+const Layout = ({pageTitle,ImgSrc, ImgAlt, location, children}) => {
 
     /*
     const [darkMode, setDarkMode] = React.useState(true);
@@ -39,10 +40,27 @@ const Layout = ({pageTitle, location,children}) => {
     }
   }
 `)
+    console.log(ImgSrc);
     return (
         <div className={`dark:bg-black dark:text-white ${darkMode ? "dark" : "light"}`}>
 
-            <Navbar location={location} />
+
+            <Navbar location={location}/>
+            <div>
+                {
+                    /*
+                    location.pathname.length ===1 ?
+                    <StaticImage src={"../../images/layout-images/blogs.png"} alt={ImgAlt} className={"w-full"}/>
+                        : location.pathname.includes("blogs") ?
+                            <StaticImage src={"../../images/layout-images/blogs.png"} alt={ImgAlt} className={"w-full"}/>
+                        :
+                            <StaticImage src={"../../images/layout-images/blogs.png"} alt={ImgAlt} className={"w-full"}/>
+
+                     */
+
+
+                }
+            </div>
             <div className={WiderContainer}>
                 <header className={siteTitle}>
                 </header>
@@ -56,7 +74,7 @@ const Layout = ({pageTitle, location,children}) => {
                 </main>
 
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

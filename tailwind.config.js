@@ -15,7 +15,7 @@ module.exports = {
       gridTemplateRows : {
         "layout" : "0.5 0.4 0.1",
         "layout2" : "auto 1fr auto",
-        "layout3" : "1fr 0.7 0.3",
+        "layout3" : "repeat(3, minmax(0, 1fr))",
         "three" : "1fr 1fr 1fr",
       },
       gridTemplateColumns : {
