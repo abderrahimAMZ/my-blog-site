@@ -10,7 +10,7 @@ import {Grid} from "@mui/material";
 
 const BlogPage = ({location, data }) => {
     return (
-        <HomeLayout pageTitle="Blogs" location={location} >
+        <HomeLayout pageTitle="Productivity" location={location} >
 
             <div className={"mt-4 mb-4 text-2xl"}>
                 here, will talk about productivity boosters, such as time management, tools, and tips to improve your productivity.
