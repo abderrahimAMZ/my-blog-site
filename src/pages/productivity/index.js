@@ -8,9 +8,9 @@ import HomeLayout from "../../components/homeLayout";
 import CarteBlog from "../../components/CarteBlog";
 import {Grid} from "@mui/material";
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({location, data }) => {
     return (
-        <HomeLayout pageTitle="Blogs">
+        <HomeLayout pageTitle="Blogs" location={location} >
 
             <div className={"mt-4 mb-4 text-2xl"}>
                 here, will talk about productivity boosters, such as time management, tools, and tips to improve your productivity.

@@ -17,7 +17,7 @@ import {StaticImage} from "gatsby-plugin-image";
 import {useContext} from "react";
 import {H1} from "./page_elements";
 import CoolBear from "./CoolBear";
-const Layout = ({pageTitle,children}) => {
+const Layout = ({pageTitle, location ,children}) => {
 
     /*
     const [darkMode, setDarkMode] = React.useState(true);
@@ -42,7 +42,7 @@ const Layout = ({pageTitle,children}) => {
     return (
         <div className={`dark:bg-black dark:text-white ${darkMode ? "dark" : "light"}`}>
 
-        <Navbar />
+        <Navbar location={location} />
 
             <div className={container}>
                 <header >

@@ -5,11 +5,11 @@ import {graphql, Link} from 'gatsby'
 import styled from "styled-components";
 import {StaticImage} from "gatsby-plugin-image";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-const BlogPost = ({ data, children }) => {
+const BlogPost = ({ data, location, children }) => {
     const  tableOfContents = data.mdx.tableOfContents;
     return (
         <div>
-            <Layout pageTitle={data.mdx.frontmatter.title}>
+            <Layout pageTitle={data.mdx.frontmatter.title} location={location}>
 
                 <div className={"blog-post"}>
                     <p id={"date"}> {data.mdx.frontmatter.date}</p>

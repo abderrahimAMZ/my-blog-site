@@ -7,9 +7,9 @@ import {H2} from "../../components/page_elements";
 import HomeLayout from "../../components/homeLayout";
 import CarteBlog from "../../components/CarteBlog";
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ location, data }) => {
     return (
-        <HomeLayout pageTitle="Series">
+        <HomeLayout pageTitle="Series" location={location}>
             <div className={"mt-20 mb-20 text-2xl"}>
                 Here you can find all the series. Series are a collection of blogs that are related to each other covering a specific topic like system programming or rust programming. We are soon to release a series on system programming and many more. Stay tuned!
             </div>

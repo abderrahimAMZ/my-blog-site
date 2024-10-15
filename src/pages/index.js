@@ -11,14 +11,14 @@ import HomeLayout from "../components/homeLayout";
 import {useState} from "react";
 import CarteBlog from "../components/CarteBlog";
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ location, data}) => {
     const [state, setState] = useState({
         raised:false,
         shadow:1,
     })
     return (
         <main>
-            <HomeLayout pageTitle="Home page">
+            <HomeLayout pageTitle="Home page" location={location}>
                 <div className={"pt-4 pb-4 text-2xl"}>
                     codfee.dev is a blog where you can find articles, tutorials and practice programming for the effective life. codfee.dev is aiming to show the importance of programming as a skill of itself and what power it can unlock in the digital world!
 

@@ -25,14 +25,14 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export default function Navbar( { location}) {
     const [darkMode, toggleDarkMode] = useContext(ModeContext);
 
     navigation.forEach(item=> item.current = false);
     navigation.forEach(item=> {
-            if (window.location.pathname.includes(item.href)) {
+            if (location.pathname.includes(item.href)) {
                 item.current = true;
-                if (window.location.pathname !== "/" && item.name !== "Home") {
+                if (location.pathname !== "/" && item.name !== "Home") {
                     item.current = false;
                 }
             }
@@ -75,7 +75,7 @@ export default function Navbar() {
                                             <Link
                                                 onClick={() => {
                                                     navigation.forEach(item=> {
-                                                            if (window.location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && window.location.pathname.length ===1) {
+                                                            if (location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && location.pathname.length ===1) {
                                                                 item.current = true;
                                                             }
                                                             else {
@@ -86,7 +86,7 @@ export default function Navbar() {
                                                 }}
                                                 to={item.href}
                                                 className={classNames(
-                                                    (window.location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && window.location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
+                                                    (location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}

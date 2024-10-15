@@ -6,10 +6,10 @@ import HomeLayout from "../components/homeLayout";
 import {useContext} from "react";
 import {ModeContext} from "../components/ModeProvider";
 // Step 2: Define your component
-const AboutPage = () => {
+const AboutPage = ({location}) => {
     const [darkMode] = useContext(ModeContext);
     return (
-            <HomeLayout pageTitle="About Me">
+            <HomeLayout pageTitle="About Me" location={location}>
 
                 <div className={"mb-32  pt-20 pb-32"}>
                 <p className={"about"}>

@@ -9,13 +9,13 @@ import Toc from "../../components/Toc";
 import {AnchorLink} from "gatsby-plugin-anchor-links";
 import CoolBear from "../../components/CoolBear";
 
-const BlogPost = ({ data, children }) => {
+const BlogPost = ({ data, location, children }) => {
     var tableOfContents = data.mdx.tableOfContents;
 
 
     return (
         <div>
-            <Layout pageTitle={data.mdx.frontmatter.title}>
+            <Layout pageTitle={data.mdx.frontmatter.title} location={location}>
 
                 <div className={"blog-post"}>
 
