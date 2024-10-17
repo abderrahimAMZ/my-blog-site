@@ -51,7 +51,7 @@ export default function Navbar( { location}) {
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:text-white">
                                     <span className="absolute -inset-0.5" />
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
@@ -86,7 +86,7 @@ export default function Navbar( { location}) {
                                                 }}
                                                 to={item.href}
                                                 className={classNames(
-                                                    (location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-gray-900 hover:bg-gray-200 hover:text-gray-900',
+                                                    (location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-black hover:bg-gray-200 hover:text-gray-900',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -126,8 +126,9 @@ export default function Navbar( { location}) {
                                     key={item.name}
                                     as="a"
                                     href={item.href}
+
                                     className={classNames(
-                                        item.current ? 'bg-gray-400 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        (location.pathname.includes(item.href) && item.name !== "Home" || item.name === "Home" && location.pathname.length ===1) ? darkMode ? 'bg-dark-nav-elements text-white' :'bg-gray-300 text-black'  : darkMode ? 'text-gray-300 hover:bg-gray-700 hover:text-white' : 'text-black hover:bg-gray-200 hover:text-gray-900',
                                         'block rounded-md px-3 py-2 text-base font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}

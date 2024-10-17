@@ -14,7 +14,7 @@ const BlogPage = ({ location, data }) => {
                 Here you can find all the series. Series are a collection of blogs that are related to each other covering a specific topic like system programming or rust programming. We are soon to release a series on system programming and many more. Stay tuned!
             </div>
 
-            <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 grid-rows-layout"}>
+            <div className={" container grid sm:grid-cols-two-cols umd:grid-cols-three-cols ulg:grid-cols-four-cols grid-rows-layout3 gap-4  "}>
                 {
                     data.allMdx.nodes.map(node => (
                         <CarteBlog title={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} date={node.frontmatter.date} author={node.frontmatter.author} time={node.frontmatter.time} author_github={node.frontmatter.author_github} type={node.frontmatter.type} slug={node.frontmatter.slug} path={"/series"}/>

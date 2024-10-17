@@ -15,7 +15,7 @@ const BlogPage = ({ location, data }) => {
             <div className={"mt-4 mb-4 text-2xl"}>
                 here you can find blogs, most of the them are a 15 minutes read.
             </div>
-            <div className={" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg xl:grid-cols-4 gap-2 grid-rows-layout"}>
+            <div className={" container grid sm:grid-cols-two-cols umd:grid-cols-three-cols ulg:grid-cols-four-cols grid-rows-layout3 gap-4  "}>
                 {
                             data.allMdx.nodes.map(node => (
                                 <CarteBlog title={node.frontmatter.title}

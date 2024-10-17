@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens : {
+        "ulg" : "1150px",
+        "umd" : "860px",
+      },
       fontFamily : {
         sans : ["Roboto", "sans-serif"],
         serif : ["Merriweather", "serif"],

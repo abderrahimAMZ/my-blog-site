@@ -28,7 +28,7 @@ const IndexPage = ({ location, data}) => {
 
                 </div>
                 <div
-                    className={"grid sm:grid-cols-two-cols md:grid-cols-three-cols xl:grid-cols-four-cols gap-0  grid-rows-layout3  md:max-w-[950px] md:max-auto "}>
+                    className={" container grid sm:grid-cols-two-cols umd:grid-cols-three-cols ulg:grid-cols-four-cols grid-rows-layout3 gap-4  "}>
                     {
                         data.allMdx.nodes.map(node => (
                             <CarteBlog title={node.frontmatter.title}
