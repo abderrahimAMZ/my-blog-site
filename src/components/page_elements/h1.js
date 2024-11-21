@@ -6,6 +6,7 @@ export const StyledH1 = styled.h1`
   font-family: ${({ theme }) => theme.font.sans};
   margin-top: ${({ theme }) => theme.spacing[8]};
   margin-bottom: ${({ theme }) => theme.spacing[8]};
+  padding: ${({ theme }) => theme.spacing[1]};
     
   line-height: ${({ theme }) => theme.lineHeight.none};
 `

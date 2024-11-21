@@ -45,7 +45,7 @@ const Layout = ({pageTitle, location ,children}) => {
         <Navbar location={location} />
 
             <div className={container}>
-                <header >
+                <header className={"px-4"}>
                     <H1>
                         <div className={"page-title pt-20 "}>
                         {pageTitle}
