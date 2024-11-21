@@ -37,6 +37,7 @@
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-plugin-styled-components": "^6.13.1",
     "gatsby-remark-autolink-headers": "^6.13.1",
+    "gatsby-remark-codepen": "^0.1.1",
     "gatsby-remark-color-highlight": "^1.0.2",
     "gatsby-remark-copy-linked-files": "^6.12.0",
     "gatsby-remark-highlight-code": "^3.3.0",

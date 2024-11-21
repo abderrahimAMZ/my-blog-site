@@ -89,6 +89,13 @@ module.exports = {
                   `gatsby-remark-color-highlight`,
                   `gatsby-remark-autolink-headers`,
                     `gatsby-remark-prismjs`,
+                  {
+                      resolve:"gatsby-remark-codepen",
+                      options: {
+                          theme: "dark",
+                          height: 400
+                      }
+                  },
 
                   {
                       resolve: `gatsby-remark-images`,
