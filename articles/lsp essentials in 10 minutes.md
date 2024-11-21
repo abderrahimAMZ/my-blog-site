@@ -12,6 +12,8 @@ thumbnail: ../images/lsp.png
 
 import SmartBear from '../src/components/SmartBear'
 import CoolBear from '../src/components/CoolBear'
+import SmartBearReverse from '../src/components/SmartBearReverse'
+import CoolBearReverse from '../src/components/CoolBearReverse'
 
 # Introduction
 
@@ -116,11 +118,11 @@ here is an implementation i did in **go** lang. you can find it here [lsp implem
 
 # Bears tea talk
 
-<SmartBear props="flex-row-reverse">
+<SmartBearReverse>
 
 There is this lsp i can lunch , let's go! 🚀, let's send `initialize` request to see what this server does`
 
-</SmartBear>
+</SmartBearReverse>
 
 <CoolBear>
 
@@ -146,11 +148,11 @@ oh, this is a lot of code here, let's see what's going on here! 🕵️‍♂️
 
 </CoolBear>
 
-<SmartBear props="flex-row-reverse">
+<SmartBearReverse>
 
 the user is typing, let's send `textDocument/didChange` notification to the server.
 
-</SmartBear>
+</SmartBearReverse>
 
 <CoolBear>
 
@@ -158,11 +160,11 @@ oh, i see you are typing, amazing, i'm keeping up with you! 🏃‍♂️
 
 </CoolBear>
 
-<SmartBear props="flex-row-reverse">
+<SmartBearReverse>
 
 the user is asking for auto-completion, let's send `textDocument/completion` request to the server.
 
-</SmartBear>
+</SmartBearReverse>
 
 <CoolBear>
 
@@ -170,11 +172,11 @@ sorry, i have no idea of what you want! 🤷‍♂️
 
 </CoolBear>
 
-<SmartBear props="flex-row-reverse">
+<SmartBearReverse>
 
 the user is asking for go to definition, let's send `textDocument/definition` request to the server.
 
-</SmartBear>
+</SmartBearReverse>
 
 <CoolBear>
 
@@ -182,11 +184,11 @@ i have no idea where i can find this definition! 🤷‍♂️
 
 </CoolBear>
 
-<SmartBear props="flex-row-reverse">
+<SmartBearReverse>
 
 are you really an lsp server? 🤔
 
-</SmartBear>
+</SmartBearReverse>
 
 
 

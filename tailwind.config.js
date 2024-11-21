@@ -27,6 +27,8 @@ module.exports = {
         "three-cols" : "1fr 1fr 1fr",
         "four-cols" : "1fr 1fr 1fr 1fr",
         "five-cols" : "1fr 1fr 1fr 1fr 1fr",
+        "bear-cols" : "0.1fr 1fr",
+        "bear-cols-reverse" : "1fr 0.1fr"
       },
       colors : {
         "dark-nav" : "#222327",

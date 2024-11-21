@@ -1,9 +1,14 @@
 import React from 'react';
 
 
-const SmartBear = ({props, children}) => {
+const SmartBearReverse = ({props, children}) => {
     return (
-        <div className={"grid grid-cols-bear-cols max-w-lg ml-2 mr-auto my-5"}>
+        <div className={"grid grid-cols-bear-cols-reverse max-w-lg mr-2 ml-auto my-5"}>
+            <div
+                className="ml-4 p-4 dark:bg-smartbear-bg border-2 rounded-lg dark:border-smartbear-bg-border bg-smartbear-bg-light border-smartbear-bg-light-border">
+                {children}
+            </div>
+
             <div className="h-[64px] w-[64px] mt-0 " title="student bear says:">
                 <svg className={"dark:fill-white max-h-20"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <path
@@ -14,11 +19,7 @@ const SmartBear = ({props, children}) => {
                         d="M54.306 42.471A3.31 3.31 0 0 1 51 39.165v-4.439h1.974a4.756 4.756 0 0 0 4.742-4.742v-.246a4.756 4.756 0 0 0-4.742-4.742h-5.947a4.756 4.756 0 0 0-4.742 4.742v.246a4.756 4.756 0 0 0 4.742 4.742H49v4.439a3.31 3.31 0 0 1-3.306 3.306 3.31 3.31 0 0 1-3.306-3.306h-2a5.312 5.312 0 0 0 5.306 5.306A5.294 5.294 0 0 0 50 42.242a5.291 5.291 0 0 0 4.306 2.229 5.312 5.312 0 0 0 5.306-5.306h-2a3.31 3.31 0 0 1-3.306 3.306zM28.944 55.566a.703.703 0 0 0-.703.703v5.369a.703.703 0 0 0 1.407 0V56.27a.704.704 0 0 0-.704-.704zM42.981 55.566a.703.703 0 0 0-.703.703v5.369a.703.703 0 0 0 1.406 0V56.27a.704.704 0 0 0-.703-.704zM57.019 55.566a.704.704 0 0 0-.704.703v5.369a.704.704 0 0 0 1.407 0V56.27a.705.705 0 0 0-.703-.704zM71.056 55.566a.704.704 0 0 0-.704.703v5.369a.704.704 0 0 0 1.407 0V56.27a.705.705 0 0 0-.703-.704zM35.963 68.79a.704.704 0 0 0-.703.704v5.368a.704.704 0 0 0 1.407 0v-5.368a.704.704 0 0 0-.704-.704zM50 68.79a.704.704 0 0 0-.703.704v5.368a.704.704 0 0 0 1.406 0v-5.368A.704.704 0 0 0 50 68.79zM64.037 68.79a.704.704 0 0 0-.704.704v5.368a.704.704 0 0 0 1.407 0v-5.368a.704.704 0 0 0-.703-.704zM28.944 79.298a.704.704 0 0 0-.703.704v5.368a.703.703 0 0 0 1.407 0v-5.368a.704.704 0 0 0-.704-.704zM42.981 79.298a.704.704 0 0 0-.703.704v5.368a.703.703 0 0 0 1.406 0v-5.368a.704.704 0 0 0-.703-.704zM57.019 79.298a.704.704 0 0 0-.704.704v5.368a.704.704 0 0 0 1.407 0v-5.368a.705.705 0 0 0-.703-.704zM71.056 79.298a.704.704 0 0 0-.704.704v5.368a.704.704 0 0 0 1.407 0v-5.368a.705.705 0 0 0-.703-.704z"></path>
                 </svg>
             </div>
-            <div
-                className="ml-4 p-4 dark:bg-smartbear-bg border-2 rounded-lg dark:border-smartbear-bg-border bg-smartbear-bg-light border-smartbear-bg-light-border">
-                {children}
-            </div>
         </div>
     )
 }
-export default SmartBear;
+export default SmartBearReverse;
