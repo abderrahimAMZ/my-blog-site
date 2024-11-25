@@ -20,7 +20,7 @@ module.exports = {
         "layout" : "0.5 0.4 0.1",
         "layout2" : "auto 1fr auto",
         "layout3" : "repeat(3, minmax(0, 1fr))",
-        "three" : "1fr 1fr 1fr",
+        "three" : "auto 1fr auto",
       },
       gridTemplateColumns : {
         "two-cols" : "1fr 1fr",
